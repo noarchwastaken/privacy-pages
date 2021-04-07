@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>自由打字，打字自由 - privacy.noarch</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="一本面向新手的隐私教程">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../css/variables.css"></noscript>
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+
+        <!-- Font Awesome 5.13 free content -->
+        <link rel="stylesheet" href="../FontAwesome/css/all.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../FontAwesome/css/all.css">
+            <link rel="stylesheet" href="../FontAwesome/css/v4-shims.css">
+        </noscript>
+
+        <!-- Fonts -->
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../tomorrow-night.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../ayu-highlight.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../highlight.css">
+            <link rel="stylesheet" href="../tomorrow-night.css">
+            <link rel="stylesheet" href="../ayu-highlight.css">
+        </noscript>
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../sidebar.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../sidebar.css"></noscript>
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix "><a href="../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix "><div>前言</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded "><a href="../Input/Input.html" class="active"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded "><a href="../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded "><a href="../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded "><a href="../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded "><a href="../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded "><a href="../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded "><div>后记</div></li><li class="chapter-item expanded affix "><a href="../CONTRIBUTING.html">反馈与贡献</a></li></ol>
+
+                <!-- mods to the vanilla sidebar-->
+                <hr/>
+                <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+                <p><a href="https://t.me/privacy_noarch" target="_blank"><img src="/images/badge-telegram.svg" height=20></a></p>
+                <p><a href="https://git.n0ar.ch/privacy" target="_blank"><img src="/images/badge-git.svg" height=20></a></p>
+                <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img src="/images/badge-gfdl.svg" height=20></a></p>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                    </div>
+
+                    <h1 class="menu-title">privacy.noarch</h1>
+
+                    <div class="right-buttons">
+                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
+                        "
+                        'use strict';
+
+                        const CN_CLEAR = 'privacy.n0ar.ch';
+                        const TW_CLEAR = 'privacy-tw.n0ar.ch';
+                        const CN_TOR = 'fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+                        const TW_TOR = 'tw.fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+
+                        switch (window.location.hostname) {
+                            case CN_CLEAR:
+                                window.location.hostname = TW_CLEAR;
+                                break;
+                            case TW_CLEAR:
+                                window.location.hostname = CN_CLEAR;
+                                break;
+                            case CN_TOR:
+                                window.location.hostname = TW_TOR;
+                                break;
+                            case TW_TOR:
+                                window.location.hostname = CN_TOR;
+                                break;
+                            default:
+                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
+                                break;
+                        }
+                        ">
+                            <strong>简/繁</strong>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/noarchwastaken/privacy" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- Page table of contents -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+
+                        <h1 id="自由打字打字自由---输入法隐私"><a class="header" href="#自由打字打字自由---输入法隐私">自由打字，打字自由 - 输入法隐私</a></h1>
+<hr />
+<p>作为中文用户，你的线上生活应该离不开输入法。</p>
+<p>输入法，掌握着所有你输入的文本。</p>
+<p>一个侵犯隐私，或是恶意的输入法所带来的危害，远不亚于符号文字输入中的键盘记录器 (Keylogger), 并且它可以隐藏为人畜无害的工具潜入你的线上生活中。</p>
+<h2 id="云输入的巨大隐私问题"><a class="header" href="#云输入的巨大隐私问题">“云输入”的巨大隐私问题</a></h2>
+<p>如果你用过商业的输入法（搜狗输入法、百度输入法...），你应该对“云输入”这个词不陌生。</p>
+<p>云输入是众多商业输入法所提供的功能，它通过“云端”的帮助为你提供更精确的候选词和联想结果。</p>
+<p>然而，要让<em>云端</em>为你工作，首先你得为云端工作：将你要输入的内容上传到云端。“云输入”的数据库就是这么构建的 - 收集用户输入的内容，并且将它推荐给其它在相同上下文中的用户。</p>
+<p>简而言之：<em>你在把你输入的内容分享给别人，只不过它被分成了一个个独立的词。同时你也在使用其他人的输入内容。</em></p>
+<h3 id="你向输入法云端上传的信息"><a class="header" href="#你向输入法云端上传的信息">你向输入法云端上传的信息</a></h3>
+<blockquote>
+<p>你向云端上传了什么信息？云端在收到你的信息后做了什么？如果对手向输入法云端请求你的信息，会发生什么？</p>
+</blockquote>
+<p>如果你是一个“普通用户”，你不出意料地没有读过商业输入法们的隐私政策。下面是一些搜狗输入法<a href="https://shouji.sogou.com/wap/htmls/privacy_policy.html">隐私政策</a>的节选，以回答上面的问题。</p>
+<h4 id="你向云输入上传的信息包括但不限于"><a class="header" href="#你向云输入上传的信息包括但不限于">你向“云输入”上传的信息，包括但不限于：</a></h4>
+<blockquote>
+<p>您在使用本软件时，根据您在软件安装及使用中授予的具体权限，搜狗公司会收集您的<strong>设备品牌、设备型号、屏幕分辨率、设备识别码、系统版本、应用识别码、IP地址。</strong></p>
+<p>在您使用快捷翻译功能时，本软件需要获取您输入的<strong>待翻译的文本信息</strong>...</p>
+<p>在您使用智能回复功能时，本软件会读取您在当前聊天场景下<strong>前文内容</strong>...</p>
+<p>在您使用云输入功能时，本软件会读取您当前输入的<strong>字符串</strong>，并通过技术分析字符串为您提供云联想词...</p>
+<p>为了向您提供地理位置词库功能，<strong>当您输入时搜狗公司可能会使用GPS、WiFi或其他技术方式收集和处理有关您实际所在位置的信息</strong>...</p>
+</blockquote>
+<p>根据对“云输入”功能的描述，搜狗完全可以通过你上传的输入字符串<strong>重建你的输入内容</strong>。</p>
+<p>根据搜狗当前 (2020-10) 的隐私政策，搜狗输入法<strong>仅会匿名化日志信息</strong>。因此可以认定，上述非日志的输入信息是非匿名的，并且与你的设备识别码 (e.g. IMEI) 和登录的帐号（如果有）绑定。</p>
+<h4 id="除了让大数据为你服务你也在为大数据服务"><a class="header" href="#除了让大数据为你服务你也在为大数据服务">除了让大数据为你服务，你也在为大数据服务：</a></h4>
+<blockquote>
+<p><strong>在符合相关法律法规的前提下，搜狗公司可能将通过本软件所收集的信息，用于搜狗公司的其他产品和服务，或帮助搜狗公司设计新产品和服务，或在不透露您个人信息的前提下对用户数据库进行分析并予以商业化的利用。例如搜狗公司可能将您在使用我们某一功能或服务时收集的信息，在另一功能或服务中向您提供特定内容，包括但不限于展示广告、基于特征标签进行间接人群画像并提供个性化服务。</strong></p>
+</blockquote>
+<p><em>如果你没为这个产品付费，那么你多半就是那个产品。</em> 商业输入法会使用你的输入向你展示针对性的广告。</p>
+<h4 id="向第三方披露你的信息前不需要经过你同意的状况"><a class="header" href="#向第三方披露你的信息前不需要经过你同意的状况">向第三方披露你的信息前不需要经过你同意的状况：</a></h4>
+<blockquote>
+<p>（1）与国家安全、国防安全有关的；</p>
+<p>（2）与公共安全、公共卫生、重大公共利益有关的；</p>
+<p>（3）与犯罪侦查、起诉、审判和判决执行等有关的；</p>
+<p>（4）出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</p>
+<p>（5）所收集的个人信息是个人信息主体自行向社会公众公开的；</p>
+<p>（6）从合法公开披露的信息中收集的您的个人信息的，如合法的新闻报道、政府信息公开等渠道；</p>
+<p>（7）根据您的要求签订和履行合同所必需的；</p>
+<p>（8）用于维护所提供的产品或服务的安全稳定运行所必需的，例如发现、处置产品或服务的故障；</p>
+<p>（9）为合法的新闻报道所必需的；</p>
+<p>（10）学术研究机构基于公共利益开展统计或学术研究所必要，且对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的；</p>
+<p>（11）法律法规及监管政策规定的其他情形。</p>
+</blockquote>
+<p><strong>因此，如果你的对手是上面任意一个，你的计划和安全将受到威胁。</strong></p>
+<h2 id="向云输入说不"><a class="header" href="#向云输入说不">向云输入说不</a></h2>
+<p>看似便利的功能潜藏巨大的危害；不过你可以从现在开始止损。</p>
+<ul>
+<li>
+<p>首先，最基础的，你需要停止使用云输入，来让输入法不再上传你的输入信息；</p>
+</li>
+<li>
+<p>其次，如果可以，你还要禁止输入法联网，这样即使它收集了信息也无法 &quot;call home&quot;.</p>
+</li>
+<li>
+<p>最后，如果你的盟友给了你更好用的工具，为什么要用对手的呢？</p>
+</li>
+</ul>
+<p>本章节，<em>noarch</em> 将教你如何禁用云输入以及其它依赖云端的功能，禁止输入法联网，并且 - <strong>硬核</strong> - 改用开源自由的输入方案。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Browsers/Bromite/Bromite.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Input/NoNetworkAccess/NoNetworkAccess.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../Browsers/Bromite/Bromite.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../Input/NoNetworkAccess/NoNetworkAccess.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../sidebar.js"></script>
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>[Android] Bromite - privacy.noarch</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="一本面向新手的隐私教程">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../../css/variables.css"></noscript>
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+
+        <!-- Font Awesome 5.13 free content -->
+        <link rel="stylesheet" href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../../FontAwesome/css/all.css">
+            <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css">
+        </noscript>
+
+        <!-- Fonts -->
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../tomorrow-night.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../ayu-highlight.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../../highlight.css">
+            <link rel="stylesheet" href="../../tomorrow-night.css">
+            <link rel="stylesheet" href="../../ayu-highlight.css">
+        </noscript>
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../../sidebar.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../../sidebar.css"></noscript>
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix "><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix "><div>前言</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Browsers/Bromite/Bromite.html" class="active"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded "><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded "><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded "><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded "><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded "><div>后记</div></li><li class="chapter-item expanded affix "><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
+
+                <!-- mods to the vanilla sidebar-->
+                <hr/>
+                <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+                <p><a href="https://t.me/privacy_noarch" target="_blank"><img src="/images/badge-telegram.svg" height=20></a></p>
+                <p><a href="https://git.n0ar.ch/privacy" target="_blank"><img src="/images/badge-git.svg" height=20></a></p>
+                <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img src="/images/badge-gfdl.svg" height=20></a></p>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                    </div>
+
+                    <h1 class="menu-title">privacy.noarch</h1>
+
+                    <div class="right-buttons">
+                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
+                        "
+                        'use strict';
+
+                        const CN_CLEAR = 'privacy.n0ar.ch';
+                        const TW_CLEAR = 'privacy-tw.n0ar.ch';
+                        const CN_TOR = 'fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+                        const TW_TOR = 'tw.fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+
+                        switch (window.location.hostname) {
+                            case CN_CLEAR:
+                                window.location.hostname = TW_CLEAR;
+                                break;
+                            case TW_CLEAR:
+                                window.location.hostname = CN_CLEAR;
+                                break;
+                            case CN_TOR:
+                                window.location.hostname = TW_TOR;
+                                break;
+                            case TW_TOR:
+                                window.location.hostname = CN_TOR;
+                                break;
+                            default:
+                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
+                                break;
+                        }
+                        ">
+                            <strong>简/繁</strong>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/noarchwastaken/privacy" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- Page table of contents -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+
+                        <h1 id="bromite"><a class="header" href="#bromite">Bromite</a></h1>
+<hr />
+<p><img src="images/bromite-logo.webp" alt="bromite-logo" /> <em><a href="https://www.bromite.org/">来源</a></em></p>
+<p>Bromite - 你的浏览器应该由你掌控。<br />
+一个注重隐私，并且自带广告屏蔽器的 Chromium 修改版</p>
+<p>开发者：<a href="https://github.com/csagan5">csagan5</a> (Bromite Project)<br />
+<a href="https://www.bromite.org/">官方网站</a> | <a href="https://github.com/bromite/bromite">源代码 (GitHub)</a> | <a href="https://github.com/bromite/bromite/blob/master/LICENSE">开源协议 (GPL3)</a></p>
+<hr />
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>当你看到上面的描述时，你可能会疑问：<em>“Chromium 是什么？我为什么从来都没有听说有人用过 Chromium? ”</em></p>
+<p>我们来换种方式描述 Chromium 吧，一句话来说：Chromium 是 Google Chrome（谷歌浏览器）的<strong>母项目</strong>。Google 在维护 Chromium 这个开源项目的同时，会将它的源代码进行修改，并且贴上不同的商标发行。在功能和使用上，两个浏览器几乎相同。</p>
+<p>假如你无法理解上面的概念也没关系，只要把 Bromite ，我们这次要介绍的浏览器，看成 <strong>Google Chrome 的修改版</strong>就行了。</p>
+<p>当我们最终安装完成并且打开这个浏览器的时候，假如你用过 Android 版 Chrome ，你会觉得 Bromite 的界面与操作和 Chrome 相差无几。</p>
+<h3 id="为什么用-bromite-而不用正统的-chrome"><a class="header" href="#为什么用-bromite-而不用正统的-chrome">为什么用 Bromite ，而不用正统的 Chrome?</a></h3>
+<p>简短的答案：<strong>你在使用 Chrome 的时候，也在使用 Google 的服务。</strong></p>
+<p>你可能依然不理解这个答案，那我们来举个例子吧：当你使用 Chrome 访问一个外语网页时（比如，你的手机设置为中文语言，访问英文的网站），界面下方会弹出一个提示：</p>
+<p><img src="images/chrome-translator.webp" alt="chrome-translator" /></p>
+<p>注意到左下角的 <img alt="google-translate" src="images/google-translate.webp" height=16> 图标了吗？这代表着当你点下翻译（在这个特定的例子里，点击“中文（简体）”）的时候，Chrome 会连接 Google 翻译服务器并且让 Google 翻译来翻译页面的内容。</p>
+<p>从隐私角度来讲，因为 Google 翻译并不是一个开放的服务，所以我们并不知道网页的内容在被送达到 Google 翻译之后发生了什么。Chrome 集成的 Google 服务还包括但不限于 <a href="https://support.google.com/chrome/answer/165139">书签同步</a>，<a href="https://support.google.com/chrome/answer/2392284">“精简模式”</a> 以及 <a href="https://news.google.com">Google 新闻</a>。这些服务都由 Google 提供，而其中涉及的所有数据都经 Google 处理。</p>
+<p>因此，Bromite 在 Chromium （Chrome的母项目）基础上，移除了上述来自 Google 的服务。</p>
+<p>如果你想要一个 Chromium 内核的 Android 网页浏览器，却不想让自己的数据被商业公司处理，那么 Bromite 是你的绝佳选择。</p>
+<h2 id="下载和安装"><a class="header" href="#下载和安装">下载和安装</a></h2>
+<h3 id="通过官网安装-bromite"><a class="header" href="#通过官网安装-bromite">通过官网安装 Bromite</a></h3>
+<blockquote>
+<p><i class="fa fa-check-circle" aria-hidden="true"></i> 如果你的设备上有 F-Droid 客户端，建议查看下方“通过 F-Droid 安装 Bromite”的指导。</p>
+</blockquote>
+<p>点击，或是在你常用浏览器的地址栏中输入 <a href="https://bromite.org">bromite.org</a> :</p>
+<blockquote>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 如果你在正在微信内阅读本文，请不要直接点击上方的链接；微信会对下载链接作出不可预测的行为。</p>
+</blockquote>
+<img alt="bromite-org" src="images/bromite-org.webp" width=450>
+<p>你可能在打开这个网页后非常疑惑：<em>为什么我看不到下载按钮？</em></p>
+<p>因为不同 Android 设备不同的硬件架构，不同的设备适用不同的安装包。要下载 Bromite, <strong>滚动到这个页面的最底部</strong>：</p>
+<img alt="bromite-org-download" src="images/bromite-org-download.webp" width=450>
+<p>在上述的 &quot;Download Bromite&quot; 表格中，左侧的 &quot;Architecture&quot; 列代表你将要下载的安装包的<strong>处理器架构</strong>；一般情况下，你的设备的对应架构会被绿色高亮。在这个例子里，我使用的是一个运行在电脑上的 Android 模拟器，所以 &quot;X86&quot; 架构被高亮。右侧的 &quot;Android Version&quot; 列代表安装包对应的 Android 版本；目前 Bromite 只提供一个 Android 版本选项。</p>
+<h4 id="在当前使用的设备上安装"><a class="header" href="#在当前使用的设备上安装">在当前使用的设备上安装</a></h4>
+<p>要为你正在使用的设备下载和安装 Bromite ，选中<strong>绿色高亮</strong>的 &quot;Architecture&quot;，然后<strong>点击 &quot;Download Bromite ...&quot;</strong></p>
+<p>你的浏览器可能会询问是否保留该文件，<strong>点击“确定”</strong>。下载完成后，<strong>点击“打开”来安装</strong>。</p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 假如你之前没有从目前使用的浏览器安装过应用，你需要进行一个额外的步骤允许应用安装。下面的视频展示了 Bromite 的安装以及允许未知来源应用的步骤。</p>
+</blockquote>
+<h4 id="为其它设备安装或者你的处理器架构没有被高亮"><a class="header" href="#为其它设备安装或者你的处理器架构没有被高亮">为其它设备安装，或者你的处理器架构没有被高亮</a></h4>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 下面描述的是为其它设备下载 Bromite 安装包的方式。如果你不清楚你在做什么，请省略这一步。</p>
+</blockquote>
+<p>如果你的处理器架构并没有被高亮，或者你要为其它设备下载和安装 Bromite, 你需要<strong>选择这个设备对应的处理器架构</strong>，然后<strong>点击 &quot;Download Bromite ...&quot;</strong></p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> “处理器架构”可以理解为设备所使用的处理器的“内部语言”。不同的处理器“语言”之间并不互相兼容。</p>
+</blockquote>
+<p>如果你正在为其它设备下载和安装 Bromite, 下载完成后，你需要将安装包传输到你的目标设备上，并且在目标设备上安装。在为其它设备下载 Bromite 的同时，你应该已经知道了在设备间传输文件的方式，在此不再赘述。</p>
+<p>下方的表格列举了一般情况下，设备类型，发布年份以及处理器架构的关系。</p>
+<blockquote>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 下表对处理器架构的推测并非 100% 准确，仅供参考。</p>
+</blockquote>
+<table><thead><tr><th>设备类型 / 发布年份</th><th align="right">处理器架构</th></tr></thead><tbody>
+<tr><td>Android 手机、平板（2017年及以后发布）</td><td align="right">ARM64</td></tr>
+<tr><td>Android 手机、平板（2017年及以前发布），或者你不清楚需要下载什么，或者 ARM64 的安装包安装失败了</td><td align="right">ARM</td></tr>
+<tr><td>Android 模拟器，双系统平板，Android-X86 电脑（Remix OS、凤凰 OS、Prime OS、Bliss OS X86 ...）</td><td align="right">X86</td></tr>
+</tbody></table>
+<h3 id="通过-f-droid-安装-bromite"><a class="header" href="#通过-f-droid-安装-bromite">通过 F-Droid 安装 Bromite</a></h3>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果你已经跟着上一步通过官网安装了 Bromite，可以省略这一步。但你也可以为了后续更新的方便在 F-Droid 上添加 Bromite 的存储库。</p>
+</blockquote>
+<p>F-Droid 的官方仓库并没有提供 Bromite，但是 Bromite Project 提供了可以添加到 F-Droid 客户端的仓库，让用户能更方便地更新 Bromite.</p>
+<blockquote>
+<p><i class="fa fa-check-circle" aria-hidden="true"></i> 在进行下面的步骤之前，请确保你已经在设备上安装了 F-Droid 客户端。关于安装 F-Droid 的指导，请<a href="../../AppStores/F-Droid/F-Droid.html">点击这里</a>。</p>
+</blockquote>
+<p>要将 Bromite 的仓库添加到 F-Droid 客户端，<strong>长按下方二维码</strong>并<strong>点击“复制链接”</strong>，或者保存并识别下面的二维码：</p>
+<blockquote>
+<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 请勿使用微信识别二维码。微信会对识别的链接作出不可预测的行为。</p>
+</blockquote>
+<p><img alt="bromite-fdroid-repo-qr" src="images/bromite-fdroid-repo-qr.webp" height=200> <em><a href="https://www.bromite.org/fdroid">来源</a></em></p>
+<p><strong>复制链接之后</strong>， <strong>打开 F-Droid 客户端，点击底栏的“设置”</strong> 进入设置界面。在设置界面，<strong>点击“存储库”</strong>：</p>
+<img alt="fdroid-settings" src="images/fdroid-settings.webp" width=450>
+<p>进入“存储库”之后，<strong>点击右上角的 <i class="fa fa-plus" aria-hidden="true"></i> 号</strong>：</p>
+<img alt="fdroid-repos" src="images/fdroid-repos.webp" width=450>
+<p>因为 F-Droid 会自动识别已经复制的内容，弹出的“添加新的存储库”对话框内应该已经填写了 Bromite F-Droid 存储库的信息。</p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果对话框内的文本是空的，你应该回到这部分的开头，重新复制或者识别二维码所包含的链接。</p>
+</blockquote>
+<img alt="bromite-add-fdroid-repo" src="images/bromite-add-fdroid-repo.webp" width=450>
+<p>当你确认对话框内的信息无误，<strong>点击“添加”</strong> 来把 Bromite 的存储库添加到 F-Droid 里。当你点击完“添加”，“存储库”列表最底端会出现一个“未验证”的存储库。稍等片刻，F-Droid 客户端会自动验证该存储库，并且最终的存储库名为 <strong>&quot;Bromite official F-Droid repository&quot;</strong>.</p>
+<img alt="bromite-fdroid-repo-unauthorized" src="images/bromite-fdroid-repo-unauthorized.webp" width=370>
+<img alt="bromite-fdroid-repo-unauthorized" src="images/bromite-fdroid-repo-authorized.webp" width=370>
+<p>回到“设置”界面，<strong>点击底栏的“最新”</strong>，你就可以看到右下角的 <i class="fa fa-search" aria-hidden="true"></i> 按钮了。在“搜索”界面里<strong>搜索 &quot;Bromite&quot;</strong>, 然后在下方<strong>点击 &quot;Bromite&quot;</strong> 行来查看 Bromite 的详细信息。在此你可以<strong>点击“安装”来安装 Bromite</strong>. 关于在 F-Droid 里搜索和安装应用的详细指导，请<a href="../../AppStores/F-Droid/F-Droid.html">点击这里</a>。</p>
+<img alt="bromite-fdroid-search" src="images/bromite-fdroid-search.webp" width=370>
+<img alt="bromite-fdroid-desc" src="images/bromite-fdroid-desc.webp" width=370>
+<h2 id="使用-bromite"><a class="header" href="#使用-bromite">使用 Bromite</a></h2>
+<p>如果你之前在 Android 上使用过 Chrome, 那么当你打开 Bromite 的时候会感觉无比亲切：<strong>它看起来和 Chrome 几乎一模一样！</strong></p>
+<p>正因如此，这里不会赘述 Bromite (Chrome) 的基本使用，而是<strong>着重描述一些 Bromite 和 Chrome 的区别</strong>，以及一些隐私相关的注意事项。</p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 因为 Bromite 的更新，本文可能不会随时保持最新。如果你有任何的疑惑，请参考 <a href="https://github.com/bromite/bromite/wiki">Bromite Wiki</a>.</p>
+</blockquote>
+<h3 id="dns-over-https"><a class="header" href="#dns-over-https">DNS over HTTPS</a></h3>
+<p><a href="https://www.zhihu.com/question/23197534">中国联通</a>、<a href="https://www.privateinternetaccess.com/blog/comcast-still-uses-mitm-javascript-injection-serve-unwanted-ads-messages/">Comcast</a> 等网络运营商被证实进行过多种中间人攻击；使用运营商提供的 DNS 存在被 <a href="https://en.wikipedia.org/wiki/DNS_spoofing">DNS 污染</a>的风险。根据政府要求，中国所有网络运营商提供的 DNS 都被污染以配合<a href="https://en.wikipedia.org/wiki/Great_Firewall">防火长城</a>的运作。未来不排除网络运营商通过中间人攻击进行 DNS 劫持（即便使用了未被污染的 DNS 服务器，查询结果也因为中间人攻击而被污染）的可能。</p>
+<p><a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS"><strong>DNS over HTTPS</strong></a> 是一个将 <a href="https://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> 请求进行加密的方案。其意义在于 <strong>将 DNS 请求使用 <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> 协议加密，来防止可能的<a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">中间人攻击</a></strong> 污染 DNS 查询结果。通过在浏览器内使用 DNS over HTTPS, 你可以指定一个 DNS 服务器列表并且与它们进行加密的 DNS 查询。</p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 下述 DoH 为 DNS over HTTPS 的简称。</p>
+</blockquote>
+<p>Bromite 可以使用 DoH, 但这个功能默认关闭。要启用 DoH, 我们首先要选择一个 DoH 提供商。</p>
+<p>网络上有很多 DoH 提供商。你可以基于个人喜好，地理位置和网络情况，以及他们的隐私条款来选择 DoH 提供商。下面是一个 DoH 提供商的简表，你可以根据下表来选择自己的 DoH 模板地址，也可以参照 <a href="https://www.privacytools.io/providers/dns/">privacytools.io</a> 的列表来选择。</p>
+<table><thead><tr><th>提供商</th><th>DoH 模板链接</th></tr></thead><tbody>
+<tr><td><a href="https://adguard.com/en/adguard-dns/overview.html#instruction">AdGuard</a></td><td><a href="https://dns.adguard.com/dns-query">https://dns.adguard.com/dns-query</a></td></tr>
+<tr><td><a href="https://support.mozilla.org/en-US/kb/firefox-dns-over-https">Cloudflare</a></td><td><a href="https://cloudflare-dns.com/dns-query">https://cloudflare-dns.com/dns-query</a></td></tr>
+<tr><td><a href="https://developers.cloudflare.com/1.1.1.1/dns-over-https/request-structure/">Cloudflare （与 Mozilla 合作，更严格的隐私条款）</a></td><td><a href="https://mozilla.cloudflare-dns.com/dns-query">https://mozilla.cloudflare-dns.com/dns-query</a></td></tr>
+<tr><td><a href="https://quad9.net/">Quad9</a></td><td><a href="https://dns.quad9.net/dns-query">https://dns.quad9.net/dns-query</a></td></tr>
+</tbody></table>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 下面的步骤将使用 Cloudflare 与 Mozilla 合作的 DoH 服务作为示例。如果你想要使用一个不同的 DoH 提供商，请将步骤中的 <a href="https://mozilla.cloudflare-dns.com/dns-query">https://mozilla.cloudflare-dns.com/dns-query</a> 链接替换成你的 DoH 模板链接。</p>
+</blockquote>
+<p>在上表长按然后复制你想要的 DoH 模板链接， 在这个例子中，<a href="https://mozilla.cloudflare-dns.com/dns-query">https://mozilla.cloudflare-dns.com/dns-query</a>. <strong>在长按弹出的对话框中，点击“复制链接地址”</strong>。</p>
+<img alt="bromite-doh-mozilla-cloudflare" src="images/bromite-doh-mozilla-cloudflare.webp" width=450>
+<p>复制之后，<strong>点击 Bromite 右上角的 <i class="fa fa-ellipsis-v" aria-hidden="true"></i> <strong>，然后</strong>点击“设置”</strong>：</p>
+<blockquote>
+<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果你看不到地址栏和 <i class="fa fa-ellipsis-v" aria-hidden="true"></i> ，请向上滚动（手指向下移动）一下页面。</p>
+</blockquote>
+<img alt="bromite-dropdown" src="images/bromite-dropdown.webp" width=370>
+<img alt="bromite-settings" src="images/bromite-settings.webp" width=370>
+<p>在“设置”界面，<strong>向下滑动</strong>直到你能看到“隐私权”，<strong>点击“隐私权”</strong>。在“隐私权”界面，<strong>点击“安全 DNS”</strong>：</p>
+<img alt="bromite-settings-privacy" src="images/bromite-settings-privacy.webp" width=370>
+<img alt="bromite-doh-off" src="images/bromite-doh-off.webp" width=370>
+<p>在“安全 DNS”界面，点击“关闭”右侧的开关来<strong>打开安全 DNS</strong>。现在你应该能看到一个“启用”以及一个打开的开关。</p>
+<img alt="bromite-doh-on" src="images/bromite-doh-on.webp" width=450>
+<p>步骤到此还没结束，我们还需要<strong>点击 &quot;DoH 模板地址&quot;</strong> 并且 <strong>输入刚才复制的地址</strong> ：</p>
+<img alt="bromite-doh-input-none" src="images/bromite-doh-input-none.webp" width=370>
+<img alt="bromite-doh-input-cf" src="images/bromite-doh-input-cf.webp" width=370>
+<p>输入完成后<strong>点击“保存”</strong>。在此 DoH 配置完成，你可以点几次返回来回到浏览状态。</p>
+<h3 id="添加和设置搜索引擎"><a class="header" href="#添加和设置搜索引擎">添加和设置搜索引擎</a></h3>
+<p>尽管 Bromite 是一个“反 Google”的项目，它的默认搜索引擎依然是 Google. 无可否认，Google 在某些标准上是目前“最好用”的搜索引擎。但从隐私角度出发，它也有着一些致命的缺陷。其中的例子有：<a href="https://policies.google.com/privacy">你的搜索请求被用于精准推广用途</a>；<a href="https://www.v2ex.com/t/663593">多次被内容农场污染搜索结果</a>...</p>
+<p>你可能想把 Google 替换成例如 <a href="https://duckduckgo.com/">DuckDuckGo</a> 等更尊重隐私的搜索引擎。</p>
+<p>DuckDuckGo 的隐私条款请见<a href="https://duckduckgo.com/privacy">https://duckduckgo.com/privacy</a>。</p>
+<p>位于 <strong><i class="fa fa-ellipsis-v" aria-hidden="true"></i> -&gt; 设置 -&gt; 搜索引擎</strong>，根据你设置的系统语言和地区，Bromite 预置了原版 Chrome 预置的所有搜索引擎：</p>
+<img alt="bromite-search-engines" src="images/bromite-search-engines.webp" width=370>
+<img alt="bromite-search-engines-en" src="images/bromite-search-engines-en.webp" width=370>
+<p>如果你是一个中文的 DuckDuckGo 用户，你可能会疑惑：<em>为什么我找不到 DuckDuckGo 作为我的搜索引擎？</em></p>
+<p>DuckDuckGo 确实没有被内置到中文的 Chrome 当中。有一个解决方法：<strong>访问一下 <a href="https://duckduckgo.com/">DuckDuckGo</a></strong> , 然后<strong>再次访问“搜索引擎”菜单</strong>，你就能在“最近用过的搜索引擎”下找到 DuckDuckGo 了。在“搜索引擎”菜单选中 DuckDuckGo, 现在 DuckDuckGo 就是你的默认搜索引擎了。</p>
+<img alt="bromite-search-engines-duckduckgo" src="images/bromite-search-engines-duckduckgo.webp" width=450>
+<p>然而，在 <em>noarch</em> 的测试当中，这个方法并不 100% 有效... 下面的视频展示了另一个有效的方法。如果让 Bromite 自动添加 DuckDuckGo 的方法失败了，你可以尝试下面的方法。</p>
+<p>下面的视频使用类原生 Android 作为示例。不同手机厂商系统的操作可能会有差别。</p>
+<h3 id="广告拦截"><a class="header" href="#广告拦截">广告拦截</a></h3>
+<p>Bromite 自带广告拦截功能，并且<strong>广告拦截功能默认开启。</strong></p>
+<p>如果广告拦截破坏了某些网页的正常使用，你可以在<strong>访问它们之前关闭广告拦截，然后在访问结束后打开</strong>：</p>
+<p>在 <strong><i class="fa fa-ellipsis-v" aria-hidden="true"></i> -&gt; 设置 -&gt; 广告拦截设置</strong>，你可以开关广告拦截以及自定义广告拦截规则列表。<strong>点击“启用”右侧的开关将其“关闭”</strong>，就可以关闭广告拦截。</p>
+<img alt="bromite-adblock-on" src="images/bromite-adblock-on.webp" width=370>
+<img alt="bromite-adblock-off" src="images/bromite-adblock-off.webp" width=370>
+<p>关于自定义广告拦截的指导，请见<a href="https://www.bromite.org/custom-filters">https://www.bromite.org/custom-filters</a> .</p>
+<h3 id="不在退出后保留标签页"><a class="header" href="#不在退出后保留标签页">不在退出后保留标签页</a></h3>
+<p>在 Bromite 和 Chrome 的默认设置中，打开 Bromite 的时候会自动恢复上一次浏览时的标签页（网页）。你可能不想让它恢复上一次的标签页，那么你可以进入 <strong><i class="fa fa-ellipsis-v" aria-hidden="true"></i> -&gt; 设置 -&gt; 隐私权</strong>，并且<strong>选中“退出时关闭所有打开的标签页”</strong>。</p>
+<img alt="bromite-close-tabs-on-exit" src="images/bromite-close-tabs-on-exit.webp" width=450>
+<blockquote>
+<p><i class="fa fa-check-circle" aria-hidden="true"></i> 彩蛋：如果你在 Bromite 或 Chrome 打开了超过 99 个标签页，它依然会保持微笑！</p>
+</blockquote>
+<p><img src="images/bromite-99plustabs.webp" alt="bromite-99plustabs" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../Fundamentals/BasicOfTheBasics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../Input/Input.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../Fundamentals/BasicOfTheBasics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../Input/Input.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../../sidebar.js"></script>
+        
+
+        
+
+    </body>
+</html>

