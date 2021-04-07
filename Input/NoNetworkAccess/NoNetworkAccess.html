@@ -1,70 +1,49 @@
 <!DOCTYPE HTML>
-<html lang="zh-Hans" class="sidebar-visible no-js light">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>[Android] 禁止输入法联网 - privacy.noarch</title>
-        
-        
 
-
-        <!-- Custom HTML head -->
-        
-
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="一本面向新手的隐私教程">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
-
-        
-        
-        <link rel="shortcut icon" href="../../favicon.png">
-        
-        <link rel="stylesheet" href="../../css/variables.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="../../css/variables.css"></noscript>
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        
-
-        <!-- Font Awesome 5.13 free content -->
-        <link rel="stylesheet" href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'">
-        <noscript>
-            <link rel="stylesheet" href="../../FontAwesome/css/all.css">
-            <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css">
-        </noscript>
-
-        <!-- Fonts -->
-        
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../../highlight.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../tomorrow-night.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../ayu-highlight.css" media="print" onload="this.media='all'">
-        <noscript>
-            <link rel="stylesheet" href="../../highlight.css">
-            <link rel="stylesheet" href="../../tomorrow-night.css">
-            <link rel="stylesheet" href="../../ayu-highlight.css">
-        </noscript>
-
-        <!-- Custom theme stylesheets -->
-        
-        <link rel="stylesheet" href="../../sidebar.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="../../sidebar.css"></noscript>
-        
-
-        
-    </head>
-    <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+<html class="sidebar-visible no-js light" lang="zh-Hans">
+<head>
+<!-- Book generated using mdBook -->
+<meta charset="utf-8"/>
+<title>[Android] 禁止输入法联网 - privacy.noarch</title>
+<!-- Custom HTML head -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="一本面向新手的隐私教程" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color">
+<link href="../../favicon.png" rel="shortcut icon"/>
+<link href="../../css/variables.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="../../css/variables.css" rel="stylesheet"/></noscript>
+<link href="../../css/general.css" rel="stylesheet"/>
+<link href="../../css/chrome.css" rel="stylesheet"/>
+<!-- Font Awesome 5.13 free content -->
+<link href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="../../FontAwesome/css/all.css" rel="stylesheet"/>
+<link href="../../FontAwesome/css/v4-shims.css" rel="stylesheet"/>
+</noscript>
+<!-- Fonts -->
+<!-- Highlight.js Stylesheets -->
+<link href="../../highlight.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../tomorrow-night.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../ayu-highlight.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="../../highlight.css" rel="stylesheet"/>
+<link href="../../tomorrow-night.css" rel="stylesheet"/>
+<link href="../../ayu-highlight.css" rel="stylesheet"/>
+</noscript>
+<!-- Custom theme stylesheets -->
+<link href="../../sidebar.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="../../sidebar.css" rel="stylesheet"/></noscript>
+</meta></head>
+<body>
+<!-- Provide site root to javascript -->
+<script type="text/javascript">
             var path_to_root = "../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
-
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -78,9 +57,8 @@
                 }
             } catch (e) { }
         </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -90,9 +68,8 @@
             html.classList.add(theme);
             html.classList.add('js');
         </script>
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+<!-- Hide / unhide sidebar before it is displayed -->
+<script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -102,49 +79,40 @@
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
-
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix "><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix "><div>前言</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Input/NoNetworkAccess/NoNetworkAccess.html" class="active"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded "><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded "><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded "><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded "><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded "><div>后记</div></li><li class="chapter-item expanded affix "><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
-
-                <!-- mods to the vanilla sidebar-->
-                <hr/>
-                <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
-                <p><a href="https://t.me/privacy_noarch" target="_blank"><img src="/images/badge-telegram.svg" height=20></a></p>
-                <p><a href="https://git.n0ar.ch/privacy" target="_blank"><img src="/images/badge-git.svg" height=20></a></p>
-                <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img src="/images/badge-gfdl.svg" height=20></a></p>
-            </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
-
-        <div id="page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        
-                    </div>
-
-                    <h1 class="menu-title">privacy.noarch</h1>
-
-                    <div class="right-buttons">
-                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
-                        "
+<nav aria-label="Table of contents" class="sidebar" id="sidebar">
+<div class="sidebar-scrollbox">
+<ol class="chapter"><li class="chapter-item expanded affix"><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix"><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix"><div>前言</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded"><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded"><a class="active" href="../../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded"><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded"><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded"><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded"><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded"><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded"><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded"><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded"><div>后记</div></li><li class="chapter-item expanded affix"><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
+<!-- mods to the vanilla sidebar-->
+<hr/>
+<p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+<p><a href="https://t.me/privacy_noarch" target="_blank"><img height="20" src="/images/badge-telegram.svg"/></a></p>
+<p><a href="https://git.n0ar.ch/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
+<p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img height="20" src="/images/badge-gfdl.svg"/></a></p>
+</div>
+<div class="sidebar-resize-handle" id="sidebar-resize-handle"></div>
+</nav>
+<div class="page-wrapper" id="page-wrapper">
+<div class="page">
+<div id="menu-bar-hover-placeholder"></div>
+<div class="menu-bar sticky bordered" id="menu-bar">
+<div class="left-buttons">
+<button aria-controls="sidebar" aria-label="Toggle Table of Contents" class="icon-button" id="sidebar-toggle" title="Toggle Table of Contents" type="button">
+<i class="fa fa-bars"></i>
+</button>
+<button aria-controls="theme-list" aria-expanded="false" aria-haspopup="true" aria-label="Change theme" class="icon-button" id="theme-toggle" title="Change theme" type="button">
+<i class="fa fa-paint-brush"></i>
+</button>
+<ul aria-label="Themes" class="theme-popup" id="theme-list" role="menu">
+<li role="none"><button class="theme" id="light" role="menuitem">Light (default)</button></li>
+<li role="none"><button class="theme" id="rust" role="menuitem">Rust</button></li>
+<li role="none"><button class="theme" id="coal" role="menuitem">Coal</button></li>
+<li role="none"><button class="theme" id="navy" role="menuitem">Navy</button></li>
+<li role="none"><button class="theme" id="ayu" role="menuitem">Ayu</button></li>
+</ul>
+</div>
+<h1 class="menu-title">privacy.noarch</h1>
+<div class="right-buttons">
+<a aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick="
                         'use strict';
 
                         const CN_CLEAR = 'privacy.n0ar.ch';
@@ -169,168 +137,125 @@
                                 window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
                                 break;
                         }
-                        ">
-                            <strong>简/繁</strong>
-                        </a>
-                        
-                        
-                        <a href="https://github.com/noarchwastaken/privacy" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
-                        
-                    </div>
-                </div>
-
-                
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                        " title="Switch between Simplified and Traditional Chinese">
+<strong>简/繁</strong>
+</a>
+<a aria-label="Git repository" href="https://github.com/noarchwastaken/privacy" title="Git repository">
+<i class="fa fa-github" id="git-repository-button"></i>
+</a>
+</div>
+</div>
+<!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+<script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <!-- Page table of contents -->
-                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
-
-                        <h1 id="禁止输入法联网"><a class="header" href="#禁止输入法联网">禁止输入法联网</a></h1>
-<hr />
+<div class="content" id="content">
+<main>
+<!-- Page table of contents -->
+<div class="sidetoc"><nav class="pagetoc"></nav></div>
+<h1 id="禁止输入法联网"><a class="header" href="#禁止输入法联网">禁止输入法联网</a></h1>
+<hr/>
 <p>在继续使用当前商业输入法的前提下，禁止它联网是你保护输入隐私的终极办法了。</p>
 <p>当你听到断网这个方法时，你可能会觉得它很简单粗暴；但实际上，很多问题是人们自己带来的，并且这些习惯形成了思维定势。你需要学会“为生活做减法”。</p>
 <p>比如你要保持一个电脑上的文件不被互联网上的病毒窃取。你花了很多功夫为它进行加固，还配置了杀毒软件和严格的防火墙，并且对这个文件进行了加密。然而在这种情况下，你面对的对手仅仅是来自互联网的病毒；实际上你只需要将其断网，并专门分配一个存储介质用于传输文件即可。</p>
 <p>下面 <em>noarch</em> 就教你如何禁止输入法（或任何其它应用）联网，防止它上传任何信息到其服务器上。</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 一些 AOSP 以及厂商系统没有此功能。如果你发现下面的步骤不适用于自己，请改用<a href="">同文输入法</a>等不联网的输入法。</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 一些 AOSP 以及厂商系统没有此功能。如果你发现下面的步骤不适用于自己，请改用<a href="">同文输入法</a>等不联网的输入法。</p>
 </blockquote>
 <h2 id="确认你当前使用的输入法"><a class="header" href="#确认你当前使用的输入法">确认你当前使用的输入法</a></h2>
 <p>首先你要知道你当前在使用什么输入法。一些手机厂商系统会预置多个输入法（例如 MIUI 会预置定制的搜狗输入法和百度输入法）。如果你还不知道你目前使用的输入法，怎么知道该禁止哪个应用联网呢？</p>
 <p>找到一个能输入文本的地方，比如你桌面的搜索栏，或是聊天软件的窗口：</p>
-<img alt=home-searchbar src=images/home-searchbar.webp width=400>
+<img alt="home-searchbar" loading="lazy" src="images/home-searchbar.webp" width="400"/>
 <p>保持输入面板打开，然后下拉打开通知栏。你会看到一个用于显示当前输入法的通知，通知上显示着当前输入法的名字。如果你使用全屏手写，点击一次手写区域来停用手写再下滑。</p>
-<img alt=notifications src=images/notifications.webp width=400>
+<img alt="notifications" loading="lazy" src="images/notifications.webp" width="400"/>
 <p>你也可以点击这个通知来看你当前安装的其它输入法，以免和它们产生混淆。</p>
-<img alt=input-selector src=images/input-selector.webp width=400>
+<img alt="input-selector" loading="lazy" src="images/input-selector.webp" width="400"/>
 <h2 id="禁止联网"><a class="header" href="#禁止联网">禁止联网</a></h2>
 <p>记住你当前使用输入法的名字，然后进入 <code>设置 - 应用和通知</code>。</p>
-<img alt=settings src=images/settings.webp width=370>
-<img alt=settings-apps src=images/settings-apps.webp width=370>
+<img alt="settings" loading="lazy" src="images/settings.webp" width="370"/>
+<img alt="settings-apps" loading="lazy" src="images/settings-apps.webp" width="370"/>
 <p>点击 <code>查看全部 [] 个应用</code>，然后在列表里寻找你的输入法。你也可以用右上角的搜索功能来快速查找。</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 这个列表按照应用名称的拼音首字母顺序排列。以英文字母开头的应用在最底部，同样按照拼音字母顺序排列。</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 这个列表按照应用名称的拼音首字母顺序排列。以英文字母开头的应用在最底部，同样按照拼音字母顺序排列。</p>
 </blockquote>
-<img alt=settings-all-apps src=images/settings-all-apps.webp width=370>
-<img alt=settings-all-apps-search-sogou src=images/settings-all-apps-search-sogou.webp width=370>
+<img alt="settings-all-apps" loading="lazy" src="images/settings-all-apps.webp" width="370"/>
+<img alt="settings-all-apps-search-sogou" loading="lazy" src="images/settings-all-apps-search-sogou.webp" width="370"/>
 <p>点击对应的应用来进入 <code>应用信息</code>，这里你可以看到卸载，停止以及对应用通知，权限，存储空间以及联网的设定。</p>
-<img alt=settings-app-info-sogou src=images/settings-app-info-sogou.webp width=400>
+<img alt="settings-app-info-sogou" loading="lazy" src="images/settings-app-info-sogou.webp" width="400"/>
 <p>在 <em>noarch</em> 使用的 LineageOS 中，对应用的联网控制选项称为 <code>移动数据和 WLAN</code>; 其中的联网总开关称为 <code>允许网络访问</code>。</p>
-<img alt=settings-sogou-network-enabled src=images/settings-sogou-network-enabled.webp width=370>
-<img alt=settings-sogou-network-disabled src=images/settings-sogou-network-disabled.webp width=370>
+<img alt="settings-sogou-network-enabled" loading="lazy" src="images/settings-sogou-network-enabled.webp" width="370"/>
+<img alt="settings-sogou-network-disabled" loading="lazy" src="images/settings-sogou-network-disabled.webp" width="370"/>
 <p>不同厂商系统的 <code>应用信息</code> 界面不尽相同，有些没有提供一个总开关，而是分别提供了 Wi-Fi(WLAN) 和移动数据的开关；将它们都关闭（禁止）即可。</p>
-<img alt=oneplus-appinfo-gboard src=images/oneplus-appinfo-gboard.webp width=245>
-<img alt=oneplus-gboard-network-enabled src=images/oneplus-gboard-network-enabled.webp width=245>
-<img alt=oneplus-gboard-network-disabled src=images/oneplus-gboard-network-disabled.webp width=245>
+<img alt="oneplus-appinfo-gboard" loading="lazy" src="images/oneplus-appinfo-gboard.webp" width="245"/>
+<img alt="oneplus-gboard-network-enabled" loading="lazy" src="images/oneplus-gboard-network-enabled.webp" width="245"/>
+<img alt="oneplus-gboard-network-disabled" loading="lazy" src="images/oneplus-gboard-network-disabled.webp" width="245"/>
 <h2 id="控制权限"><a class="header" href="#控制权限">控制权限</a></h2>
 <p><em>noarch</em> 还建议你在 <code>应用信息 - 权限</code> 内拒绝该输入法的所有权限请求，<strong>尤其是存储权限。</strong></p>
 <p>这样能防止输入法将收集的数据存储在内部存储里，供其它没有被禁止联网的追踪应用读取并且上传。</p>
 <p>以搜狗输入法为例，它能在在不被允许任何权限的情况下正常运行。</p>
-<img alt=sogou-permissions src=images/sogou-permissions.webp width=400>
+<img alt="sogou-permissions" loading="lazy" src="images/sogou-permissions.webp" width="400"/>
 <p>隐私大户输入法们现在不能 call home 了！</p>
 <h2 id="停用云输入功能"><a class="header" href="#停用云输入功能">停用云输入功能</a></h2>
 <p>禁止输入法联网后，你可能会发现输入法依然尝试加载云输入候选却加载失败。为了解决这个问题，你还要进行一些额外配置来在输入法中禁用这些联网功能，这样它们就不会再尝试进行联网。</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 下面以2020年10月的搜狗输入法为例，新功能可能会被添加，仅供参考。不同输入法操作不同，但对功能和选项的命名基本相似。</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 下面以2020年10月的搜狗输入法为例，新功能可能会被添加，仅供参考。不同输入法操作不同，但对功能和选项的命名基本相似。</p>
 </blockquote>
 <p>在桌面打开输入法，进入输入法设置：</p>
-<img alt=sogou-mine src=images/sogou-mine.webp width=400>
+<img alt="sogou-mine" loading="lazy" src="images/sogou-mine.webp" width="400"/>
 <p>拒绝 <code>用户体验改进计划</code>。</p>
-<img alt=sogou-telemetry src=images/sogou-telemetry.webp width=370>
-<img alt=sogou-settings src=images/sogou-settings.webp width=370>
+<img alt="sogou-telemetry" loading="lazy" src="images/sogou-telemetry.webp" width="370"/>
+<img alt="sogou-settings" loading="lazy" src="images/sogou-settings.webp" width="370"/>
 <p>在 <code>输入设置</code> 中，关闭 <code>AI 联想</code>。</p>
-<img alt=sogou-settings-input1 src=images/sogou-settings-input1.webp width=370>
+<img alt="sogou-settings-input1" loading="lazy" src="images/sogou-settings-input1.webp" width="370"/>
 <p>滚动到 <code>输入设置</code> 最底部，进入 <code>其它设置</code>；</p>
-<img alt=sogou-settings-input2 src=images/sogou-settings-input2.webp width=370>
+<img alt="sogou-settings-input2" loading="lazy" src="images/sogou-settings-input2.webp" width="370"/>
 <p>在 <code>其它设置</code> 里关闭所有你看得见的选项。</p>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 长图警告</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 长图警告</p>
 </blockquote>
-<img alt=sogou-ads src=images/sogou-ads.webp width=370>
+<img alt="sogou-ads" loading="lazy" src="images/sogou-ads.webp" width="370"/>
 <p>回到设置主界面，进入 <code>词库设置</code>，禁用 <code>自动更新热词</code>：</p>
-<img alt=sogou-dictionary src=images/sogou-dictionary.webp width=400>
+<img alt="sogou-dictionary" loading="lazy" src="images/sogou-dictionary.webp" width="400"/>
 <p>最后，在 <code>旺仔助手设置</code> 里禁用旺仔。</p>
-<img alt=sogou-assistant src=images/sogou-assistant.webp width=400>
+<img alt="sogou-assistant" loading="lazy" src="images/sogou-assistant.webp" width="400"/>
 <p>到此，你已经禁用了所有能够被禁用的联网功能，这样应该最小化搜狗输入法在被禁止联网后的联网尝试。</p>
 <h2 id="总结"><a class="header" href="#总结">总结</a></h2>
 <p>无法联网或是与其它应用交流的商业输入法相对联网的商业输入法显然更加安全。</p>
 <p>但这种方法不是绝对的：例如<a href="#%E7%A6%81%E6%AD%A2%E8%81%94%E7%BD%91">这一部分</a>中的一加手机只能控制 Wi-Fi 和数据联网。如果你连接到了一个通过蓝牙共享的网络热点，因为操作系统没有对蓝牙网络进行限制，输入法依然能联网，甚至上传所有你之前的输入数据，使得你前功尽弃。</p>
 <p>如果你认为<em>用人不疑，疑人不用</em>，想要进一步的输入隐私，你可以改用不联网，开源自由的<a href="">同文输入法 Trime</a>. </p>
-
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                        
-                            <a rel="prev" href="../../Input/Input.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                        
-
-                        
-                            <a rel="next" href="../../Passwords/Passwords.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        
-
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                    <a rel="prev" href="../../Input/Input.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                
-
-                
-                    <a rel="next" href="../../Passwords/Passwords.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                
-            </nav>
-
-        </div>
-
-        
-
-        
-
-        
-
-        
-        <script type="text/javascript">
+</main>
+<nav aria-label="Page navigation" class="nav-wrapper">
+<!-- Mobile navigation buttons -->
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="mobile-nav-chapters previous" href="../../Input/Input.html" rel="prev" title="Previous chapter">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-keyshortcuts="Right" aria-label="Next chapter" class="mobile-nav-chapters next" href="../../Passwords/Passwords.html" rel="next" title="Next chapter">
+<i class="fa fa-angle-right"></i>
+</a>
+<div style="clear: both"></div>
+</nav>
+</div>
+</div>
+<nav aria-label="Page navigation" class="nav-wide-wrapper">
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="../../Input/Input.html" rel="prev" title="Previous chapter">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="../../Passwords/Passwords.html" rel="next" title="Next chapter">
+<i class="fa fa-angle-right"></i>
+</a>
+</nav>
+</div>
+<script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-
-        
-
-        
-
-        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
-
-        <!-- Custom JS scripts -->
-        
-        <script type="text/javascript" src="../../sidebar.js"></script>
-        
-
-        
-
-    </body>
+<script charset="utf-8" src="../../clipboard.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="../../highlight.js" type="text/javascript"></script>
+<script charset="utf-8" src="../../book.js" type="text/javascript"></script>
+<!-- Custom JS scripts -->
+<script src="../../sidebar.js" type="text/javascript"></script>
+</body>
 </html>

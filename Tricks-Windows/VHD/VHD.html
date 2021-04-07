@@ -1,70 +1,49 @@
 <!DOCTYPE HTML>
-<html lang="zh-Hans" class="sidebar-visible no-js light">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>使用 VHD(X) 部署原生多系统 ^ - privacy.noarch</title>
-        
-        
 
-
-        <!-- Custom HTML head -->
-        
-
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="一本面向新手的隐私教程">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
-
-        
-        
-        <link rel="shortcut icon" href="../../favicon.png">
-        
-        <link rel="stylesheet" href="../../css/variables.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="../../css/variables.css"></noscript>
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        
-
-        <!-- Font Awesome 5.13 free content -->
-        <link rel="stylesheet" href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'">
-        <noscript>
-            <link rel="stylesheet" href="../../FontAwesome/css/all.css">
-            <link rel="stylesheet" href="../../FontAwesome/css/v4-shims.css">
-        </noscript>
-
-        <!-- Fonts -->
-        
-
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../../highlight.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../tomorrow-night.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="../../ayu-highlight.css" media="print" onload="this.media='all'">
-        <noscript>
-            <link rel="stylesheet" href="../../highlight.css">
-            <link rel="stylesheet" href="../../tomorrow-night.css">
-            <link rel="stylesheet" href="../../ayu-highlight.css">
-        </noscript>
-
-        <!-- Custom theme stylesheets -->
-        
-        <link rel="stylesheet" href="../../sidebar.css" media="print" onload="this.media='all'">
-        <noscript><link rel="stylesheet" href="../../sidebar.css"></noscript>
-        
-
-        
-    </head>
-    <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+<html class="sidebar-visible no-js light" lang="zh-Hans">
+<head>
+<!-- Book generated using mdBook -->
+<meta charset="utf-8"/>
+<title>使用 VHD(X) 部署原生多系统 ^ - privacy.noarch</title>
+<!-- Custom HTML head -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="一本面向新手的隐私教程" name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color">
+<link href="../../favicon.png" rel="shortcut icon"/>
+<link href="../../css/variables.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="../../css/variables.css" rel="stylesheet"/></noscript>
+<link href="../../css/general.css" rel="stylesheet"/>
+<link href="../../css/chrome.css" rel="stylesheet"/>
+<!-- Font Awesome 5.13 free content -->
+<link href="../../FontAwesome/css/all.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../FontAwesome/css/v4-shims.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="../../FontAwesome/css/all.css" rel="stylesheet"/>
+<link href="../../FontAwesome/css/v4-shims.css" rel="stylesheet"/>
+</noscript>
+<!-- Fonts -->
+<!-- Highlight.js Stylesheets -->
+<link href="../../highlight.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../tomorrow-night.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="../../ayu-highlight.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="../../highlight.css" rel="stylesheet"/>
+<link href="../../tomorrow-night.css" rel="stylesheet"/>
+<link href="../../ayu-highlight.css" rel="stylesheet"/>
+</noscript>
+<!-- Custom theme stylesheets -->
+<link href="../../sidebar.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript><link href="../../sidebar.css" rel="stylesheet"/></noscript>
+</meta></head>
+<body>
+<!-- Provide site root to javascript -->
+<script type="text/javascript">
             var path_to_root = "../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
-
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+<!-- Work around some values being stored in localStorage wrapped in quotes -->
+<script type="text/javascript">
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -78,9 +57,8 @@
                 }
             } catch (e) { }
         </script>
-
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+<!-- Set the theme before any content is loaded, prevents flash -->
+<script type="text/javascript">
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -90,9 +68,8 @@
             html.classList.add(theme);
             html.classList.add('js');
         </script>
-
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+<!-- Hide / unhide sidebar before it is displayed -->
+<script type="text/javascript">
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -102,49 +79,40 @@
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
-
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix "><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix "><div>前言</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded "><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded "><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded "><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded "><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded "><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Windows/VHD/VHD.html" class="active"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded "><div>后记</div></li><li class="chapter-item expanded affix "><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
-
-                <!-- mods to the vanilla sidebar-->
-                <hr/>
-                <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
-                <p><a href="https://t.me/privacy_noarch" target="_blank"><img src="/images/badge-telegram.svg" height=20></a></p>
-                <p><a href="https://git.n0ar.ch/privacy" target="_blank"><img src="/images/badge-git.svg" height=20></a></p>
-                <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img src="/images/badge-gfdl.svg" height=20></a></p>
-            </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
-
-        <div id="page-wrapper" class="page-wrapper">
-
-            <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        
-                    </div>
-
-                    <h1 class="menu-title">privacy.noarch</h1>
-
-                    <div class="right-buttons">
-                        <a title="Switch between Simplified and Traditional Chinese" aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick=
-                        "
+<nav aria-label="Table of contents" class="sidebar" id="sidebar">
+<div class="sidebar-scrollbox">
+<ol class="chapter"><li class="chapter-item expanded affix"><a href="../../index.html">privacy.noarch</a></li><li class="chapter-item expanded affix"><a href="../../SUMMARY.html">目录</a></li><li class="chapter-item expanded affix"><div>前言</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">1.</strong> 在开始前</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Fundamentals/BasicOfTheBasics.html"><strong aria-hidden="true">1.1.</strong> 常见错误集合：线上安全基本原则</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">2.</strong> 从可信的来源安装软件</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">2.1.</strong> [Android] F-Droid</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">2.2.</strong> [Android] Aurora Store</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.</strong> 安全地使用浏览器上网</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Browsers/Bromite/Bromite.html"><strong aria-hidden="true">3.1.</strong> [Android] Bromite</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.2.</strong> [Desktop/All] Firefox</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">3.2.1.</strong> 使用插件来增强浏览体验 ^</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">3.3.</strong> [Desktop/All]Tor Browser ^</div></li></ol></li><li class="chapter-item expanded"><a href="../../Input/Input.html"><strong aria-hidden="true">4.</strong> 自由打字，打字自由</a></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Input/NoNetworkAccess/NoNetworkAccess.html"><strong aria-hidden="true">4.1.</strong> [Android] 禁止输入法联网</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">4.2.</strong> 同文输入法 (TRIME) ^</div></li></ol></li><li class="chapter-item expanded"><a href="../../Passwords/Passwords.html"><strong aria-hidden="true">5.</strong> 帐号安全：保护，隔离，整理</a></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Passwords/PasswordManagers.html"><strong aria-hidden="true">5.1.</strong> 让密码管理器帮你记住密码</a></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">5.1.1.</strong> [Android] Bitwarden</div></li><li class="chapter-item expanded"><a href="../../Passwords/BitwardenWeb/BitwardenWeb.html"><strong aria-hidden="true">5.1.2.</strong> [Web] Bitwarden</a></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.1.3.</strong> [Desktop/All] KeePassXC ^</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.</strong> 二步验证 - 增强帐号安全</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.1.</strong> [Android] andOTP</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">5.2.2.</strong> [Desktop/All] KeePassXC 的二步验证功能</div></li></ol></li></ol></li><li class="chapter-item expanded"><a href="../../WallBreak/WallBreak.html"><strong aria-hidden="true">6.</strong> 突破网络长城</a></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">6.1.</strong> 代理提供商</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.</strong> 代理工具 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.1.</strong> V2Ray</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.2.</strong> Trojan</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">6.2.3.</strong> Shadowsocks*</div></li></ol></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">7.</strong> 在享受自由言论之前：“分裂人格”的魅力</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Identities/iYP_DID/iYP_DID.html"><strong aria-hidden="true">7.1.</strong> [转载] 分身术完整指南：妥善管理您的在线身份并获得安全的方法</a></li><li class="chapter-item expanded"><a href="../../Identities/WorldIsMine/WorldIsMine.html"><strong aria-hidden="true">7.2.</strong> [转载] 一个网友的“个人网络身份整改方案”</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.</strong> 在网络围墙外社交</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.1.</strong> 中心化</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.1.1.</strong> [All] Telegram</div></li><li class="chapter-item expanded"><a href="../../RTC/Signal/Signal.html"><strong aria-hidden="true">8.1.2.</strong> [Android] Signal</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.</strong> 去中心化 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.1.</strong> [Android/iOS] Matrix/Element</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">8.2.2.</strong> [Web] Matrix/Element</div></li></ol></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.</strong> 私密地发送和接收邮件</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.</strong> 邮件提供商</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.1.</strong> [Web] ProtonMail</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.1.2.</strong> [Web] Tutanota</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.</strong> 邮件客户端 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.1.</strong> [Android] K-9 Mail</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">9.2.2.</strong> [Desktop/All] Thunderbird</div></li></ol></li></ol></li><li class="chapter-item expanded"><a href="../../Encryption/Encryption.html"><strong aria-hidden="true">10.</strong> 加密，加密一切</a></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Encryption/Pubkey/Pubkey.html"><strong aria-hidden="true">10.1.</strong> [翻译] 公钥加密简介</a></li><li class="chapter-item expanded"><a href="../../Encryption/OpenKeychain/OpenKeychain.html"><strong aria-hidden="true">10.2.</strong> [Android] PGP: OpenKeychain</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.</strong> Android 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">11.1.</strong> 系统设置</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.</strong> “刷机”基础</div></li><li><ol class="section"><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.1.</strong> 深入了解自己的设备</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.2.2.</strong> 选择第三方 ROM</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.3.</strong> Magisk</div></li><li class="chapter-item expanded"><div><strong aria-hidden="true">11.4.</strong> microG</div></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">12.</strong> Windows 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><a class="active" href="../../Tricks-Windows/VHD/VHD.html"><strong aria-hidden="true">12.1.</strong> 使用 VHD(X) 部署原生多系统 ^</a></li></ol></li><li class="chapter-item expanded"><div><strong aria-hidden="true">13.</strong> 类 Unix 玩机技巧 ^</div></li><li><ol class="section"><li class="chapter-item expanded"><a href="../../Tricks-Unix/dos-donts/dos-donts.html"><strong aria-hidden="true">13.1.</strong> 网上教程不会告诉你的类 Unix 使用注意事项</a></li></ol></li><li class="chapter-item expanded"><div>后记</div></li><li class="chapter-item expanded affix"><a href="../../CONTRIBUTING.html">反馈与贡献</a></li></ol>
+<!-- mods to the vanilla sidebar-->
+<hr/>
+<p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+<p><a href="https://t.me/privacy_noarch" target="_blank"><img height="20" src="/images/badge-telegram.svg"/></a></p>
+<p><a href="https://git.n0ar.ch/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
+<p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img height="20" src="/images/badge-gfdl.svg"/></a></p>
+</div>
+<div class="sidebar-resize-handle" id="sidebar-resize-handle"></div>
+</nav>
+<div class="page-wrapper" id="page-wrapper">
+<div class="page">
+<div id="menu-bar-hover-placeholder"></div>
+<div class="menu-bar sticky bordered" id="menu-bar">
+<div class="left-buttons">
+<button aria-controls="sidebar" aria-label="Toggle Table of Contents" class="icon-button" id="sidebar-toggle" title="Toggle Table of Contents" type="button">
+<i class="fa fa-bars"></i>
+</button>
+<button aria-controls="theme-list" aria-expanded="false" aria-haspopup="true" aria-label="Change theme" class="icon-button" id="theme-toggle" title="Change theme" type="button">
+<i class="fa fa-paint-brush"></i>
+</button>
+<ul aria-label="Themes" class="theme-popup" id="theme-list" role="menu">
+<li role="none"><button class="theme" id="light" role="menuitem">Light (default)</button></li>
+<li role="none"><button class="theme" id="rust" role="menuitem">Rust</button></li>
+<li role="none"><button class="theme" id="coal" role="menuitem">Coal</button></li>
+<li role="none"><button class="theme" id="navy" role="menuitem">Navy</button></li>
+<li role="none"><button class="theme" id="ayu" role="menuitem">Ayu</button></li>
+</ul>
+</div>
+<h1 class="menu-title">privacy.noarch</h1>
+<div class="right-buttons">
+<a aria-label="Switch between Simplified and Traditional Chinese" class="icon-button" onclick="
                         'use strict';
 
                         const CN_CLEAR = 'privacy.n0ar.ch';
@@ -169,38 +137,30 @@
                                 window.alert('Error determining current site language.\nI\'m either being served locally, or running as a mirror.\n\nIf you are running a mirror, please change the hostnames on line ~166 in theme/index.hbs.');
                                 break;
                         }
-                        ">
-                            <strong>简/繁</strong>
-                        </a>
-                        
-                        
-                        <a href="https://github.com/noarchwastaken/privacy" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
-                        
-                    </div>
-                </div>
-
-                
-
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                        " title="Switch between Simplified and Traditional Chinese">
+<strong>简/繁</strong>
+</a>
+<a aria-label="Git repository" href="https://github.com/noarchwastaken/privacy" title="Git repository">
+<i class="fa fa-github" id="git-repository-button"></i>
+</a>
+</div>
+</div>
+<!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+<script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
-
-                <div id="content" class="content">
-                    <main>
-                        <!-- Page table of contents -->
-                        <div class="sidetoc"><nav class="pagetoc"></nav></div>
-
-                        <h1 id="使用-vhdx-部署原生多系统-"><a class="header" href="#使用-vhdx-部署原生多系统-">使用 VHD(X) 部署原生多系统 ^</a></h1>
-<hr />
+<div class="content" id="content">
+<main>
+<!-- Page table of contents -->
+<div class="sidetoc"><nav class="pagetoc"></nav></div>
+<h1 id="使用-vhdx-部署原生多系统-"><a class="header" href="#使用-vhdx-部署原生多系统-">使用 VHD(X) 部署原生多系统 ^</a></h1>
+<hr/>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> <strong>这是一篇进阶文章。</strong> 为了保证简洁，本文会讲解更少的基础操作，而更注重细节和原理；尽管如此，<em>noarch</em> 也会尽量解释清楚每一个必要的步骤。<br />
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> <strong>这是一篇进阶文章。</strong> 为了保证简洁，本文会讲解更少的基础操作，而更注重细节和原理；尽管如此，<em>noarch</em> 也会尽量解释清楚每一个必要的步骤。<br/>
 在阅读本文之前，你应该已经了解了<a href="https://www.cipcourses.com/resources/how-does-online-proctoring-work/">监考软件</a>，<a href="https://zh.wikipedia.org/zh-cn/%E8%99%9B%E6%93%AC%E6%A9%9F%E5%99%A8">虚拟机</a>，<a href="https://zh.wikipedia.org/wiki/%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F">虚拟磁盘</a>以及 <a href="https://www.thewindowsclub.com/how-does-windows-10-boot">Windows 启动</a>的基本概念，并且熟悉 <a href="https://www.youtube.com/watch?v=92lpSazVmA4">Windows 命令行的基本操作</a>。如果你还没有，点击前面的链接来了解。</p>
 </blockquote>
 <h2 id="noarch-的碎碎念"><a class="header" href="#noarch-的碎碎念"><em>noarch</em> 的碎碎念</a></h2>
@@ -209,7 +169,7 @@
 <p>原因是 COVID-19 “使得间谍软件合法化，并且学校强迫让学生安装他们” (<a href="https://www.forbes.com/sites/seanlawson/2020/04/24/are-schools-forcing-students-to-install-spyware-that-invades-their-privacy-as-a-result-of-the-coronavirus-lockdown/">Forbes</a>, <a href="https://www.eff.org/deeplinks/2020/09/students-are-pushing-back-against-proctoring-surveillance-apps">EFF</a>).</p>
 <p>简单来说：因为 COVID-19 疫情，学生需要完全上网课，同时也要在网上考试；而“为了防止考试作弊”，学校强制学生在考试时安装“监考软件”。</p>
 <p>幸运的是，<em>noarch</em> 所在的高中依然部分开放，考试照常在学校进行，不需要面对监考软件。然而最近有大学的朋友给我发了这张图：</p>
-<p><img src="images/virtual-machine-detection.webp" alt="virtual-machine-detection" /></p>
+<p><img alt="virtual-machine-detection" loading="lazy" src="images/virtual-machine-detection.webp"/></p>
 <p>这张图里，她尝试在 VMware Fusion 虚拟机里运行监考软件；意料之中的是，监考软件检测到了虚拟机的存在并且拒绝启动。</p>
 <p>如果你不知道对客户机隐藏虚拟化状态的方法，或是 <em>noarch</em> 将要介绍的使用 VHD 原生启动 Windows, 在 due date 的催促下，你可能就高挂白旗，在日常使用的系统乖乖装上了监考软件。</p>
 <h2 id="目标和限制"><a class="header" href="#目标和限制">目标和限制</a></h2>
@@ -221,28 +181,28 @@
 <p>使用虚拟磁盘启动时，Windows 启动引导器会挂载虚拟磁盘并启动虚拟磁盘内的 Windows; 除此之外，虚拟磁盘内的 Windows 会直接使用所有物理硬件。 如果你接触过传统多系统，下面是虚拟磁盘启动和传统多系统的一些区别：</p>
 <h3 id="相比传统多系统"><a class="header" href="#相比传统多系统">相比传统多系统</a></h3>
 <ul>
-<li><i class="fa fa-plus-circle" aria-hidden="true"></i> 因为基于虚拟磁盘，能像虚拟机一样创建“快照”</li>
-<li><i class="fa fa-minus-circle" aria-hidden="true"></i> 无法“休眠”（暂停到磁盘）
+<li><i aria-hidden="true" class="fa fa-plus-circle"></i> 因为基于虚拟磁盘，能像虚拟机一样创建“快照”</li>
+<li><i aria-hidden="true" class="fa fa-minus-circle"></i> 无法“休眠”（暂停到磁盘）
 <ul>
 <li>但“睡眠”（暂停到内存）依然可用</li>
 </ul>
 </li>
-<li><i class="fa fa-minus-circle" aria-hidden="true"></i> 无法更新 Windows 的大版本（例如 Windows 10 1909 升级到 2004）</li>
-<li><i class="fa fa-minus-circle" aria-hidden="true"></i> 位于虚拟磁盘内的 Windows 必须是专业版以上（专业版(N)，企业版(N)，教育版(N)...）</li>
+<li><i aria-hidden="true" class="fa fa-minus-circle"></i> 无法更新 Windows 的大版本（例如 Windows 10 1909 升级到 2004）</li>
+<li><i aria-hidden="true" class="fa fa-minus-circle"></i> 位于虚拟磁盘内的 Windows 必须是专业版以上（专业版(N)，企业版(N)，教育版(N)...）</li>
 </ul>
 <h3 id="相比虚拟机"><a class="header" href="#相比虚拟机">相比虚拟机</a></h3>
 <ul>
-<li><i class="fa fa-plus-circle" aria-hidden="true"></i> 能直接利用物理硬件，性能损失少</li>
-<li><i class="fa fa-plus-circle" aria-hidden="true"></i> 较少被检测为“虚拟机”</li>
-<li><strong><i class="fa fa-minus-circle" aria-hidden="true"></i> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 无法控制软件对硬件的访问</strong></li>
-<li><strong><i class="fa fa-minus-circle" aria-hidden="true"></i> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 无法完全控制软件对你“主系统”数据的访问</strong></li>
+<li><i aria-hidden="true" class="fa fa-plus-circle"></i> 能直接利用物理硬件，性能损失少</li>
+<li><i aria-hidden="true" class="fa fa-plus-circle"></i> 较少被检测为“虚拟机”</li>
+<li><strong><i aria-hidden="true" class="fa fa-minus-circle"></i> <i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 无法控制软件对硬件的访问</strong></li>
+<li><strong><i aria-hidden="true" class="fa fa-minus-circle"></i> <i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 无法完全控制软件对你“主系统”数据的访问</strong></li>
 </ul>
 <h3 id="其它限制"><a class="header" href="#其它限制">其它限制</a></h3>
 <ul>
-<li><i class="fa fa-info-circle" aria-hidden="true"></i> 用来启动的虚拟磁盘，以及存储这个虚拟磁盘文件的物理磁盘不能使用“动态分区”（一个微软专有的分区表格式）</li>
-<li><i class="fa fa-info-circle" aria-hidden="true"></i> 虚拟磁盘文件不能位于一个 Samba 分享（网络卷）上</li>
-<li><i class="fa fa-info-circle" aria-hidden="true"></i> 存储这个虚拟磁盘文件的物理卷不能使用 BitLocker 加密</li>
-<li><i class="fa fa-info-circle" aria-hidden="true"></i> 存储这个虚拟磁盘文件的物理卷必须是 NTFS 或 exFAT (Windows 10 1809+) 格式</li>
+<li><i aria-hidden="true" class="fa fa-info-circle"></i> 用来启动的虚拟磁盘，以及存储这个虚拟磁盘文件的物理磁盘不能使用“动态分区”（一个微软专有的分区表格式）</li>
+<li><i aria-hidden="true" class="fa fa-info-circle"></i> 虚拟磁盘文件不能位于一个 Samba 分享（网络卷）上</li>
+<li><i aria-hidden="true" class="fa fa-info-circle"></i> 存储这个虚拟磁盘文件的物理卷不能使用 BitLocker 加密</li>
+<li><i aria-hidden="true" class="fa fa-info-circle"></i> 存储这个虚拟磁盘文件的物理卷必须是 NTFS 或 exFAT (Windows 10 1809+) 格式</li>
 </ul>
 <p>别怕，如果你没有听说过上述的功能，那么你大概率不需要这些功能，因此虚拟磁盘多系统非常适合你；如果你是上述功能的用户，你知道如何应对 ;)</p>
 <h2 id="先决条件"><a class="header" href="#先决条件">先决条件</a></h2>
@@ -250,7 +210,7 @@
 <ul>
 <li>一个运行着 Windows 10 的 PC
 <ul>
-<li><strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Windows 10 on ARM 和 Windows 10 S 不支持多启动</strong></li>
+<li><strong><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Windows 10 on ARM 和 Windows 10 S 不支持多启动</strong></li>
 </ul>
 </li>
 <li>至少 20GiB 的磁盘空闲空间，<em>noarch</em> 建议至少保留 60 GiB 以便安装应用</li>
@@ -262,62 +222,62 @@
 <h2 id="下载-windows-安装镜像"><a class="header" href="#下载-windows-安装镜像">下载 Windows 安装镜像</a></h2>
 <p>在虚拟磁盘里安装 Windows 就像在虚拟机里安装 Windows. 首先你需要准备一个 <code>iso</code> 格式的 Windows 安装镜像。</p>
 <p>你可以通过多种方法向微软获得 Windows 安装镜像，例如“媒体创建工具”：</p>
-<p><img src="images/windows-image-creation-tool.webp" alt="windows-image-creation-tool" /></p>
+<p><img alt="windows-image-creation-tool" loading="lazy" src="images/windows-image-creation-tool.webp"/></p>
 <p>或者只为非 Windows 电脑开放的直接 <code>iso</code> 下载。</p>
-<p><img src="images/windows10iso-actual.webp" alt="windows10iso-actual" /></p>
+<p><img alt="windows10iso-actual" loading="lazy" src="images/windows10iso-actual.webp"/></p>
 <p>这两种方式 <em>noarch</em> 就不在此赘述；你可以在等待下载的同时进行下一步。</p>
 <h2 id="创建虚拟磁盘文件"><a class="header" href="#创建虚拟磁盘文件">创建虚拟磁盘文件</a></h2>
 <p>接下来你需要创建一个虚拟磁盘 <code>vhdx</code> 文件。</p>
-<p>右键点击 <i class="fa fa-windows" aria-hidden="true"></i> 键，或是按<code><i class="fa fa-windows" aria-hidden="true"></i> + X</code>，在弹出的菜单中选择“磁盘管理”：</p>
+<p>右键点击 <i aria-hidden="true" class="fa fa-windows"></i> 键，或是按<code><i aria-hidden="true" class="fa fa-windows"></i> + X</code>，在弹出的菜单中选择“磁盘管理”：</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果你当前在使用一个标准账户，你需要以管理员打开 <code>PowerShell</code> / <code>CMD</code> 然后从那运行 <code>diskmgmt</code>.</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 如果你当前在使用一个标准账户，你需要以管理员打开 <code>PowerShell</code> / <code>CMD</code> 然后从那运行 <code>diskmgmt</code>.</p>
 </blockquote>
-<p><img src="images/diskmgmt.webp" alt="diskmgmt" /></p>
+<p><img alt="diskmgmt" loading="lazy" src="images/diskmgmt.webp"/></p>
 <p>要创建一个虚拟磁盘，点击菜单栏的“操作”- “创建 VHD”：</p>
-<p><img src="images/diskmgmt-actions.webp" alt="diskmgmt-actions" /></p>
+<p><img alt="diskmgmt-actions" loading="lazy" src="images/diskmgmt-actions.webp"/></p>
 <p>然后在弹出的窗口里选择 <code>VHDX - 动态扩展</code>，指定 VHD 的最大大小，然后选择虚拟磁盘文件的存储位置。</p>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <code>VHD</code> 的最大大小不能超过物理磁盘当前可用的空间大小。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> <code>VHD</code> 的最大大小不能超过物理磁盘当前可用的空间大小。</p>
 </blockquote>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果你打算在虚拟磁盘里安装的是 Windows 7, 因为 Windows 7 无法从 <code>VHDX</code> 启动，你应该使用 <code>VHD</code> 作为虚拟磁盘格式。</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 如果你打算在虚拟磁盘里安装的是 Windows 7, 因为 Windows 7 无法从 <code>VHDX</code> 启动，你应该使用 <code>VHD</code> 作为虚拟磁盘格式。</p>
 </blockquote>
-<img alt=diskmgmt-newvhd src=images/diskmgmt-newvhd.webp width=370>
-<img alt=diskmgmt-newvhd-done src=images/diskmgmt-newvhd-done.webp width=370>
+<img alt="diskmgmt-newvhd" loading="lazy" src="images/diskmgmt-newvhd.webp" width="370"/>
+<img alt="diskmgmt-newvhd-done" loading="lazy" src="images/diskmgmt-newvhd-done.webp" width="370"/>
 <p>填写完成后点击“确定”，你就可以在“磁盘管理”中看到新添加的虚拟磁盘了：</p>
-<p><img src="images/diskmgmt-vhd-online.webp" alt="diskmgmt-vhd-online" /></p>
+<p><img alt="diskmgmt-vhd-online" loading="lazy" src="images/diskmgmt-vhd-online.webp"/></p>
 <p>就像物理磁盘一样，你也需要初始化一个虚拟磁盘：为其创建一个分区表，然后创建一个分区。</p>
 <p>右击左侧的“没有初始化”，选择“初始化磁盘”；然后在弹出的窗口点击“确定”。</p>
-<p><img src="images/diskmgmt-vhd-init.webp" alt="diskmgmt-vhd-init" /><br />
-<img src="images/diskmgmt-vhd-parttable.webp" alt="diskmgmt-vhd-parttable" /></p>
+<p><img alt="diskmgmt-vhd-init" loading="lazy" src="images/diskmgmt-vhd-init.webp"><br/>
+<img alt="diskmgmt-vhd-parttable" loading="lazy" src="images/diskmgmt-vhd-parttable.webp"/></img></p>
 <p>这步做完后你就得到了一个准备被分区的磁盘：</p>
-<p><img src="images/diskmgmt-vhd-init-finished.webp" alt="diskmgmt-vhd-init-finished" /></p>
+<p><img alt="diskmgmt-vhd-init-finished" loading="lazy" src="images/diskmgmt-vhd-init-finished.webp"/></p>
 <p>接下来你就可以按照正常的方法给这个虚拟磁盘分区。<em>noarch</em> 在这里只给虚拟磁盘创建一个 NTFS 分区：</p>
-<p><img src="images/diskmgmt-vhd-newpart-menu.webp" alt="diskmgmt-vhd-newpart-menu" />
-<img src="images/diskmgmt-vhd-newpart-dialog.webp" alt="diskmgmt-vhd-newpart-dialog" /></p>
+<p><img alt="diskmgmt-vhd-newpart-menu" loading="lazy" src="images/diskmgmt-vhd-newpart-menu.webp"/>
+<img alt="diskmgmt-vhd-newpart-dialog" loading="lazy" src="images/diskmgmt-vhd-newpart-dialog.webp"/></p>
 <p>在“新建简单卷向导”里一路点击“下一步”，你就得到了一个可用的虚拟磁盘分区。</p>
-<p><img src="images/diskmgmt-vhd-newvolume-done.webp" alt="diskmgmt-vhd-newvolume-done" /></p>
+<p><img alt="diskmgmt-vhd-newvolume-done" loading="lazy" src="images/diskmgmt-vhd-newvolume-done.webp"/></p>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 虚拟磁盘的最大大小不能超过当前磁盘可用空间的大小。这是因为虚拟磁盘内的 Windows 在启动时会为了防止磁盘写入错误，将自己扩展到虚拟磁盘的最大大小，并在关机时将自己缩小到实际数据量的大小。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 虚拟磁盘的最大大小不能超过当前磁盘可用空间的大小。这是因为虚拟磁盘内的 Windows 在启动时会为了防止磁盘写入错误，将自己扩展到虚拟磁盘的最大大小，并在关机时将自己缩小到实际数据量的大小。</p>
 </blockquote>
 <h2 id="解压-windows"><a class="header" href="#解压-windows">“解压” Windows</a></h2>
 <p>接下来是本文最重要的一步：将 Windows 解压到虚拟磁盘里。</p>
 <p>这是 <em>noarch</em> 想要写这篇文章的主要原因：<em>noarch</em> 找到的描述在虚拟磁盘里安装 Windows 的现有中文文章，均使用某种第三方工具或脚本将 Windows “解压”到目标虚拟磁盘。这些工具多数只为对应的教程所写，没有被长期维护，不够可靠。</p>
 <p>实际上你可以使用 Windows 自带的工具 <code>DISM</code> 简单地“解压” Windows 安装镜像。</p>
 <p>首先，在文件资源管理器里装载你刚刚下载的 Windows 安装光盘：</p>
-<img alt=mount-windows-iso src=images/mount-windows-iso.webp width=450>
+<img alt="mount-windows-iso" loading="lazy" src="images/mount-windows-iso.webp" width="450"/>
 <p>然后你就可以在“此电脑”里看到“一个新光盘的插入”。</p>
-<p><img src="images/windows-iso-mounted.webp" alt="windows-iso-mounted" /></p>
+<p><img alt="windows-iso-mounted" loading="lazy" src="images/windows-iso-mounted.webp"/></p>
 <p>你可以右击然后“打开”（不是“从媒体安装或运行程序”）刚刚装载的 <code>iso</code> 镜像。</p>
 <p>如果你是直接下载的 <code>iso</code>, 你可以在装载的“光盘”里找到 <code>sources\install.wim</code>.</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果你是使用“媒体创建工具”创建的 <code>iso</code>, 这个文件则会是 <code>install.esd</code> 而不是 <code>install.wim</code>.</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 如果你是使用“媒体创建工具”创建的 <code>iso</code>, 这个文件则会是 <code>install.esd</code> 而不是 <code>install.wim</code>.</p>
 <p>如果你的是 <code>install.esd</code>, 请将下面所有命令中 <code>install.wim</code> 替换成 <code>install.esd</code>.</p>
 </blockquote>
-<img alt=install-wim src=images/install-wim.webp width=450>
-<p><code><i class="fa fa-windows" aria-hidden="true"></i> + X</code>, 用管理员权限打开 <code>Windows PowerShell</code> 或 <code>CMD</code>:</p>
-<img alt=win-x-powershell src=images/win-x-powershell.webp width=450>
-<p><img src="images/powershell.webp" alt="powershell" /></p>
+<img alt="install-wim" loading="lazy" src="images/install-wim.webp" width="450"/>
+<p><code><i aria-hidden="true" class="fa fa-windows"></i> + X</code>, 用管理员权限打开 <code>Windows PowerShell</code> 或 <code>CMD</code>:</p>
+<img alt="win-x-powershell" loading="lazy" src="images/win-x-powershell.webp" width="450"/>
+<p><img alt="powershell" loading="lazy" src="images/powershell.webp"/></p>
 <p>我们接下来会用 <code>DISM</code> 来查看和“解压”这个镜像。</p>
 <p><code>install.wim</code> 是一个 <code>WinImage</code> 镜像；<code>WinImage</code> 是微软在 Windows Vista 发布时推出的一个镜像格式。</p>
 <p>其一个重要特性是可以在一个镜像中差分多个子镜像，而不显著增加主镜像的大小。因此，它取代了 Windows XP 及之前的文件复制，专门用来包装 Windows, 使得多个不同的 Windows 版本 (edition) 可以被包装在一个安装光盘里。</p>
@@ -325,7 +285,7 @@
 <pre><code>dism /Get-ImageInfo /ImageFile:[你的 install.wim 位置]
 </code></pre>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 你需要将上方的 <code>[你的 install.wim 位置]</code> 替换成你 <code>install.wim</code> 的实际位置。同样你也需要替换所有后续使用方括号 <code>[]</code> 引用的数值。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 你需要将上方的 <code>[你的 install.wim 位置]</code> 替换成你 <code>install.wim</code> 的实际位置。同样你也需要替换所有后续使用方括号 <code>[]</code> 引用的数值。</p>
 </blockquote>
 <p>这是 <em>noarch</em> 的运行结果：</p>
 <pre><code>PS C:\Windows\system32&gt; dism /Get-ImageInfo /ImageFile:D:\sources\install.wim
@@ -389,7 +349,7 @@
 </li>
 </ul>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 在上方的 <code>DISM</code> 命令里，许多选项具有从属关系。例如你不能将 <code>/Index:</code> 移动到 <code>/ApplyDir</code> 后面，因为 <code>/Index:</code> 从属于 <code>/ImageFile:</code>. 如果你运行时出错了，建议你检查一下选项的顺序。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 在上方的 <code>DISM</code> 命令里，许多选项具有从属关系。例如你不能将 <code>/Index:</code> 移动到 <code>/ApplyDir</code> 后面，因为 <code>/Index:</code> 从属于 <code>/ImageFile:</code>. 如果你运行时出错了，建议你检查一下选项的顺序。</p>
 </blockquote>
 <p>在 <em>noarch</em> 的例子里，是执行这个命令：</p>
 <pre><code>dism /Apply-Image /ImageFile:D:\sources\install.wim /Index:6 /ApplyDir:E: /Verify /Check-Integrity
@@ -431,7 +391,7 @@
 </code></pre>
 <p>这一步会将你在虚拟磁盘内的 Windows 添加到 <a href="https://www.thewindowsclub.com/how-does-windows-10-boot"><code>BOOTMGR</code></a> 的启动选项里。从现在起，你在开机时将需要选择进入安装在物理磁盘上的 Windows 或是虚拟磁盘上的 Windows. </p>
 <p>理论上，这一步做完后，你就可以重启，然后选择新的 Windows 了；在启动时你会看到“选择操作系统”界面，其中含有 <code>VHD</code> 的就是你安装在虚拟磁盘内的 Windows.</p>
-<p><img src="images/bootmgr-initial.webp" alt="bootmgr-initial" /></p>
+<p><img alt="bootmgr-initial" loading="lazy" src="images/bootmgr-initial.webp"/></p>
 <h3 id="重命名启动项"><a class="header" href="#重命名启动项">重命名启动项</a></h3>
 <p>为了更好地区分虚拟和物理磁盘中的操作系统，你可能想给刚刚添加的启动项取一个不同的名字。要给启动项改名，你需要用到 <code>bcdedit</code>.</p>
 <p>在 <code>BOOTMGR</code> 的启动项数据库里，每个启动项都有一个唯一的 <code>UUID</code>; 要对一个特定的启动项进行修改，你需要先获取它们的 <code>UUID</code>.</p>
@@ -488,20 +448,20 @@ resumeobject            {edd55b40-0bc1-11eb-8106-a0043c6d1b90}
 nx                      OptIn
 bootmenupolicy          Standard
 </code></pre>
-<p>在每个 &quot;Windows 启动加载器&quot; 下的 <code>标识符</code> 就是我们要用的 <code>UUID</code>.</p>
+<p>在每个 "Windows 启动加载器" 下的 <code>标识符</code> 就是我们要用的 <code>UUID</code>.</p>
 <p><code>device</code> 行代表启动项所使用的设备；目前我们的虚拟磁盘依然在挂载状态，所以 <code>device</code> 会返回当前虚拟磁盘被挂载到的盘符。在 <em>noarch</em> 的例子里，它是 <code>E:</code>, 对应的 <code>UUID</code> 是 <code>{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}</code>.</p>
 <p>选中然后右击鼠标复制这个标识符，然后运行：</p>
-<pre><code>bcdedit /set &quot;[你的启动项 UUID]&quot; description &quot;[启动项描述]&quot;
+<pre><code>bcdedit /set "[你的启动项 UUID]" description "[启动项描述]"
 </code></pre>
 <blockquote>
-<p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 因为 <code>PowerShell</code> 与 <code>CMD</code> 对待字符串的方式不同， 在 <code>PowerShell</code> 里，启动项 <code>UUID</code> 以及描述需要用双引号 <code>&quot;</code> 或单引号 <code>'</code> 括起来。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> 因为 <code>PowerShell</code> 与 <code>CMD</code> 对待字符串的方式不同， 在 <code>PowerShell</code> 里，启动项 <code>UUID</code> 以及描述需要用双引号 <code>"</code> 或单引号 <code>'</code> 括起来。</p>
 </blockquote>
 <p>在 <em>noarch</em> 的例子里，这是我运行的实际命令以及结果：</p>
-<pre><code>PS C:\Windows\system32&gt; bcdedit /set &quot;{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}&quot; description &quot;位于 VHDX 内的 Windows 10 专业工作站版&quot;
+<pre><code>PS C:\Windows\system32&gt; bcdedit /set "{edd55b4d-0bc1-11eb-8106-a0043c6d1b90}" description "位于 VHDX 内的 Windows 10 专业工作站版"
 操作成功完成。
 </code></pre>
 <p>操作完成后，你就可以重启进入新安装的 Windows 了。</p>
-<p><img src="images/bootmgr-renamed.webp" alt="bootmgr-renamed" /></p>
+<p><img alt="bootmgr-renamed" loading="lazy" src="images/bootmgr-renamed.webp"/></p>
 <h2 id="配置新安装的-windows"><a class="header" href="#配置新安装的-windows">配置新安装的 Windows</a></h2>
 <p>重启选择新安装的 Windows 后，Windows 可能会多重启几次；而这些重启依然会通过原系统的启动引导器进行，因此你需要在电脑前 <del>坐和放宽</del> 并且准备在启动菜单中选择虚拟磁盘内的 Windows 安装。</p>
 <p><em>noarch</em> 将不在此赘述 <code>OOBE</code>（开箱体验），详细的过程请看 <a href="">OOBE 注意事项（未完成）。</a></p>
@@ -514,43 +474,43 @@ bootmenupolicy          Standard
 <p>如果你要手动安装驱动，虚拟磁盘内的 Windows 在驱动安装上和直接在物理磁盘内安装基本无异。</p>
 <h3 id="卸载-unmount-物理磁盘"><a class="header" href="#卸载-unmount-物理磁盘">卸载 (unmount) 物理磁盘</a></h3>
 <blockquote>
-<p><i class="fa fa-bomb" aria-hidden="true"></i> <strong>永远加密和备份高敏感性和珍贵的数据。</strong> 下面的方法只能避免常见的文件操作，并不能阻止专门为了盗取或摧毁已卸载磁盘内数据的恶意软件。</p>
+<p><i aria-hidden="true" class="fa fa-bomb"></i> <strong>永远加密和备份高敏感性和珍贵的数据。</strong> 下面的方法只能避免常见的文件操作，并不能阻止专门为了盗取或摧毁已卸载磁盘内数据的恶意软件。</p>
 </blockquote>
 <p>你应该不想这个系统内的应用读取你直接存储在物理磁盘内的文件。然而 Windows 会自动挂载所有检测到的磁盘和分区，使得所有的应用都能访问其中的内容：</p>
-<p><img src="images/explorer-vhd.webp" alt="explorer-vhd" /></p>
+<p><img alt="explorer-vhd" loading="lazy" src="images/explorer-vhd.webp"/></p>
 <p>要卸载 (unmount, 取消装载，而不是移除) 物理磁盘，你同样需要使用磁盘管理 <code>diskmgmt</code>.</p>
-<p><img src="images/diskmgmt-in-vhd.webp" alt="diskmgmt-in-vhd" /></p>
+<p><img alt="diskmgmt-in-vhd" loading="lazy" src="images/diskmgmt-in-vhd.webp"/></p>
 <p>右击你要卸载的分区，选择“更改驱动器号和路径”：</p>
-<p><img src="images/diskmgmt-change-drive-letter-menu.webp" alt="diskmgmt-change-drive-letter-menu" /></p>
+<p><img alt="diskmgmt-change-drive-letter-menu" loading="lazy" src="images/diskmgmt-change-drive-letter-menu.webp"/></p>
 <p>在弹出的窗口里选中当前的驱动器号，然后“删除”。同时你需要两次确认操作：</p>
-<p><img src="images/diskmgmt-change-drive-letter-window.webp" alt="diskmgmt-change-drive-letter-window" /></p>
-<p><img src="images/diskmgmt-unmount-confirm.webp" alt="diskmgmt-unmount-confirm" /></p>
-<p><img src="images/diskmgmt-unmount-confirm2.webp" alt="diskmgmt-unmount-confirm2" /></p>
+<p><img alt="diskmgmt-change-drive-letter-window" loading="lazy" src="images/diskmgmt-change-drive-letter-window.webp"/></p>
+<p><img alt="diskmgmt-unmount-confirm" loading="lazy" src="images/diskmgmt-unmount-confirm.webp"/></p>
+<p><img alt="diskmgmt-unmount-confirm2" loading="lazy" src="images/diskmgmt-unmount-confirm2.webp"/></p>
 <p>对所有自动装载的物理分区重复上述操作，你就能卸载所有想隔离的物理分区了。你甚至可以卸载包含着当前虚拟磁盘文件的物理分区，而 Windows 依然能访问这个虚拟磁盘文件。</p>
-<p><img src="images/diskmgmt-in-vhd-unmounted.webp" alt="diskmgmt-in-vhd-unmounted" /></p>
+<p><img alt="diskmgmt-in-vhd-unmounted" loading="lazy" src="images/diskmgmt-in-vhd-unmounted.webp"/></p>
 <h3 id="虚拟内存"><a class="header" href="#虚拟内存">虚拟内存</a></h3>
 <p><a href="https://social.technet.microsoft.com/Forums/windows/en-US/dd78df78-7025-4ed7-ac47-2310e814c68f/native-vhd-boot-and-swapfile?forum=w7itprovirt">Windows 不支持在虚拟磁盘存放虚拟内存分页文件；</a>因此你需要将分页文件直接存储在物理磁盘上。</p>
 <p>如果你卸载了所有物理磁盘和分区，Windows 将无处存放分页文件，并会在开机时弹出“性能选项”，提示你分配一个分页文件：</p>
-<img alt=pagefile-not-found src=images/pagefile-not-found.webp width=450>
+<img alt="pagefile-not-found" loading="lazy" src="images/pagefile-not-found.webp" width="450"/>
 <p>很抱歉 <del>(<em>noarch</em> 又跟微软没关系我道什么歉啊)</del> 你需要每次开机都面对这个提示。</p>
 <p>没有物理分区存放虚拟内存，Windows 会在没有虚拟内存的情况下运行。如果你 PC 的内存较少 ( &lt;=4GiB ), 你可能需要注意内存的使用，以免内存不足，应用无法启动或正常运行。</p>
 <h2 id="在另一个-windows-中访问虚拟磁盘"><a class="header" href="#在另一个-windows-中访问虚拟磁盘">在另一个 Windows 中访问虚拟磁盘</a></h2>
 <p>安装完成之后，要在另一个 Windows 中访问这个虚拟磁盘内的文件，你需要手动挂载该虚拟磁盘。</p>
 <p>打开磁盘管理 <code>diskmgmt</code>, 在顶部菜单点击 <code>操作 -&gt; 附加 VHD</code>: </p>
-<p><img src="images/diskmgmt-attach-vhd.webp" alt="diskmgmt-attach-vhd" /></p>
-<p><img src="images/diskmgmt-attach-vhd-empty.webp" alt="diskmgmt-attach-vhd-empty" /></p>
+<p><img alt="diskmgmt-attach-vhd" loading="lazy" src="images/diskmgmt-attach-vhd.webp"/></p>
+<p><img alt="diskmgmt-attach-vhd-empty" loading="lazy" src="images/diskmgmt-attach-vhd-empty.webp"/></p>
 <p>选择你之前创建的 <code>vhdx</code>, 点击“确定”。</p>
-<p><img src="images/diskmgmt-attach-vhd-file-selection.webp" alt="diskmgmt-attach-vhd-file-selection" /></p>
-<p><img src="images/diskmgmt-attach-vhd-filled.webp" alt="diskmgmt-attach-vhd-filled" /></p>
+<p><img alt="diskmgmt-attach-vhd-file-selection" loading="lazy" src="images/diskmgmt-attach-vhd-file-selection.webp"/></p>
+<p><img alt="diskmgmt-attach-vhd-filled" loading="lazy" src="images/diskmgmt-attach-vhd-filled.webp"/></p>
 <p>你就可以在文件资源管理器中访问这个虚拟磁盘了。</p>
 <p>这个虚拟磁盘会在重启时被卸载；你也可以在访问完后手动卸载该虚拟磁盘。</p>
 <p>在磁盘管理中右击挂载过的虚拟磁盘，选择“分离 VHD”：</p>
-<p><img src="images/diskmgmt-detach-vhd.webp" alt="diskmgmt-detach-vhd" /></p>
+<p><img alt="diskmgmt-detach-vhd" loading="lazy" src="images/diskmgmt-detach-vhd.webp"/></p>
 <p>然后确认。</p>
 <blockquote>
-<p><i class="fa fa-info-circle" aria-hidden="true"></i> 如果 Windows 提示该磁盘正在被占用，关闭所有文件资源管理器的窗口，再试一次。</p>
+<p><i aria-hidden="true" class="fa fa-info-circle"></i> 如果 Windows 提示该磁盘正在被占用，关闭所有文件资源管理器的窗口，再试一次。</p>
 </blockquote>
-<p><img src="images/diskmgmt-detach-vhd-confirm.webp" alt="diskmgmt-detach-vhd-confirm" /></p>
+<p><img alt="diskmgmt-detach-vhd-confirm" loading="lazy" src="images/diskmgmt-detach-vhd-confirm.webp"/></p>
 <h2 id="操作差分虚拟磁盘--快照"><a class="header" href="#操作差分虚拟磁盘--快照">操作差分虚拟磁盘 / 快照</a></h2>
 <h3 id="创建"><a class="header" href="#创建">创建</a></h3>
 <p>就像其它的虚拟地盘格式，你也可以通过差分 <code>VHD</code> 来为虚拟磁盘内的系统创建“快照”。</p>
@@ -578,86 +538,51 @@ DiskPart 已成功创建虚拟磁盘文件。
 <p>然后你需要按照<a href="#%E5%9C%A8%E5%8F%A6%E4%B8%80%E4%B8%AA-windows-%E4%B8%AD%E8%AE%BF%E9%97%AE%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98">在另一个 Windows 中访问虚拟磁盘</a>中的步骤挂载此差分虚拟磁盘。</p>
 <p>创建完成后，你需要重复<a href="#%E9%85%8D%E7%BD%AE%E5%90%AF%E5%8A%A8%E9%A1%B9">配置启动项</a>和<a href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%90%AF%E5%8A%A8%E9%A1%B9">重命名启动项</a>中的步骤，并将这些步骤中的虚拟磁盘文件换成你刚刚创建的拆分虚拟磁盘。</p>
 <p>将拆分虚拟磁盘添加到启动项后，你在启动到虚拟磁盘时，需要选择拆分虚拟磁盘，而不是源虚拟磁盘：</p>
-<p><img src="images/diff-vhd-boot.webp" alt="diff-vhd-boot" /></p>
+<p><img alt="diff-vhd-boot" loading="lazy" src="images/diff-vhd-boot.webp"/></p>
 <blockquote>
-<p><i class="fa fa-bomb" aria-hidden="true"></i> 如果你在这时从源虚拟磁盘启动，你由此创建的<strong>所有</strong>差分磁盘将会失效。</p>
+<p><i aria-hidden="true" class="fa fa-bomb"></i> 如果你在这时从源虚拟磁盘启动，你由此创建的<strong>所有</strong>差分磁盘将会失效。</p>
 </blockquote>
 <h3 id="恢复"><a class="header" href="#恢复">恢复</a></h3>
 <p>要恢复“快照”，只需要删除你在“创建快照”时使用的差分磁盘，然后删除其启动项：</p>
-<pre><code>bcdedit /delete &quot;[你的启动项 UUID]&quot;
+<pre><code>bcdedit /delete "[你的启动项 UUID]"
 </code></pre>
 <p>例如：</p>
-<pre><code>bcdedit /delete &quot;{6e430704-1163-11eb-b935-d3152726ad7a}&quot;
+<pre><code>bcdedit /delete "{6e430704-1163-11eb-b935-d3152726ad7a}"
 </code></pre>
 <p>最后再次按照<a href="#%E5%88%9B%E5%BB%BA">创建</a>中的步骤创建新的拆分磁盘。</p>
 <h2 id="总结"><a class="header" href="#总结">总结</a></h2>
 <p>最后 <em>noarch</em> 再次提醒，<strong>VHD 以及其它双系统手段不能作为对恶意软件的防护</strong>。</p>
 <p>它能做到的，是提升软件访问你数据的门槛，以及防止软件注册后台服务实时监控你的行为。</p>
 <p>光看不做没用，如果你面对监考软件或“不想用却必须要用”软件的威胁，现在就去试试吧。</p>
-
-                    </main>
-
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                        
-                            <a rel="prev" href="../../Encryption/OpenKeychain/OpenKeychain.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                        
-
-                        
-                            <a rel="next" href="../../Tricks-Unix/dos-donts/dos-donts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        
-
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                    <a rel="prev" href="../../Encryption/OpenKeychain/OpenKeychain.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                
-
-                
-                    <a rel="next" href="../../Tricks-Unix/dos-donts/dos-donts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                
-            </nav>
-
-        </div>
-
-        
-
-        
-
-        
-
-        
-        <script type="text/javascript">
+</main>
+<nav aria-label="Page navigation" class="nav-wrapper">
+<!-- Mobile navigation buttons -->
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="mobile-nav-chapters previous" href="../../Encryption/OpenKeychain/OpenKeychain.html" rel="prev" title="Previous chapter">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-keyshortcuts="Right" aria-label="Next chapter" class="mobile-nav-chapters next" href="../../Tricks-Unix/dos-donts/dos-donts.html" rel="next" title="Next chapter">
+<i class="fa fa-angle-right"></i>
+</a>
+<div style="clear: both"></div>
+</nav>
+</div>
+</div>
+<nav aria-label="Page navigation" class="nav-wide-wrapper">
+<a aria-keyshortcuts="Left" aria-label="Previous chapter" class="nav-chapters previous" href="../../Encryption/OpenKeychain/OpenKeychain.html" rel="prev" title="Previous chapter">
+<i class="fa fa-angle-left"></i>
+</a>
+<a aria-keyshortcuts="Right" aria-label="Next chapter" class="nav-chapters next" href="../../Tricks-Unix/dos-donts/dos-donts.html" rel="next" title="Next chapter">
+<i class="fa fa-angle-right"></i>
+</a>
+</nav>
+</div>
+<script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-
-        
-
-        
-
-        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
-
-        <!-- Custom JS scripts -->
-        
-        <script type="text/javascript" src="../../sidebar.js"></script>
-        
-
-        
-
-    </body>
+<script charset="utf-8" src="../../clipboard.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="../../highlight.js" type="text/javascript"></script>
+<script charset="utf-8" src="../../book.js" type="text/javascript"></script>
+<!-- Custom JS scripts -->
+<script src="../../sidebar.js" type="text/javascript"></script>
+</body>
 </html>
