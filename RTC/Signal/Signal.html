@@ -201,10 +201,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="关于-signal-中国直连"><a class="header" href="#关于-signal-中国直连">关于 Signal 中国直连</a></h3>
-<p>你在阅读本章之前可能听说了 Signal 没有被防火长城屏蔽，并将此看作一个 Signal 的优点。</p>
-<p>虽然 Signal 可以直连，但 <em>noarch</em> 不推荐这么做，因为防火长城会记录所有向墙外的连接，连接 Signal <strong>可能</strong>会使你成为“重点监控对象”。</p>
-<p>因此，<em>noarch</em> 依然建议<a href="/WallBreak/WallBreak.html">使用代理</a>连接 Signal, 并只在绝对必要的情况下（例如代理失效）直连。</p>
+<!-- 从 2021 年 3 月开始，Signal 已在中国被墙。
+### 关于 Signal 中国直连
+
+你在阅读本章之前可能听说了 Signal 没有被防火长城屏蔽，并将此看作一个 Signal 的优点。
+
+虽然 Signal 可以直连，但 *noarch* 不推荐这么做，因为防火长城会记录所有向墙外的连接，连接 Signal **可能**会使你成为“重点监控对象”。
+
+因此，*noarch* 依然建议[使用代理](/WallBreak/WallBreak.md)连接 Signal, 并只在绝对必要的情况下（例如代理失效）直连。
+-->
 <h3 id="signal-与-google-服务"><a class="header" href="#signal-与-google-服务">Signal 与 Google 服务</a></h3>
 <p><em>noarch</em> 注意到了 Signal 的 Android 版依赖 Google 服务框架进行推送通知。</p>
 <p>Signal 在其开发初期需要 Google 服务框架才能运行。这是因为严格上 Android 应用需要 Google 框架来推送通知，及时送达消息。没有了 Google 服务框架提供的<a href="https://en.wikipedia.org/wiki/Google_Cloud_Messaging">推送通知服务</a>，Signal 需要长期保持后台运行并维持一个 <a href="https://en.wikipedia.org/wiki/WebSocket">WebSocket</a> 开放以推送消息，而 Android 是禁止这么做的。</p>
