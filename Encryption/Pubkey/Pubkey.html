@@ -85,8 +85,9 @@
 <!-- mods to the vanilla sidebar-->
 <hr/>
 <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+<p><b>无广告，无追踪，无跨站请求，可退出的 CDN.</b> privacy.noarch 致力于维持互联网该有的样子。</p>
 <p><a href="https://t.me/privacy_noarch" target="_blank"><img height="20" src="/images/badge-telegram.svg"/></a></p>
-<p><a href="https://git.n0ar.ch/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
+<p><a href="https://github.com/noarchwastaken/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
 <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img height="20" src="/images/badge-gfdl.svg"/></a></p>
 </div>
 <div class="sidebar-resize-handle" id="sidebar-resize-handle"></div>
@@ -258,7 +259,7 @@
 </ul>
 <p>现在你应该清楚，知道你公钥的人越多，公钥加密对于你而言就更有用。<del>公钥是可以像电话号码一样随意分享的，你可以把它随意分享给想和你加密聊天的人，而不用担心中间有谁看到了你的公钥。</del></p>
 <blockquote>
-<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> <em>noarch</em> 注0：如果端到端加密在你所在的地区非法，或是有人禁止你使用加密通讯，那么你最好不要“公开”有关你真实身份的公钥；否则敌人可能只因为你在使用加密通讯这件事就可以逮捕你。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> noarch 注0：如果端到端加密在你所在的地区非法，或是有人禁止你使用加密通讯，那么你最好不要“公开”有关你真实身份的公钥；否则敌人可能只因为你在使用加密通讯这件事就可以逮捕你。</p>
 </blockquote>
 <p>在一对密钥中，公钥对应其私钥。私钥才是你要真正好好保管的“钥匙”。它可以用来解密，或加密（签名）消息。</p>
 <blockquote>
@@ -275,7 +276,7 @@
 <p>要进行公钥加密，前提得有两个密钥：一个用于加密，一个用于解密。</p>
 <p><del>我们说到了，用于加密的公钥可以随意分享：你可以把它随意散播，例如放在一个密钥服务器上，这样人们才能给你发加密消息。随意散播公钥不会破坏你加密信息的安全。</del></p>
 <blockquote>
-<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> <em>noarch</em> 注1：见<a href="#%E5%9B%9E%E9%A1%BE%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E5%8A%A0%E5%AF%86">回顾：使用公钥加密</a></p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> noarch 注1：见<a href="#%E5%9B%9E%E9%A1%BE%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E5%8A%A0%E5%AF%86">回顾：使用公钥加密</a></p>
 </blockquote>
 <p><img alt="" loading="lazy" src="images/15_0.webp"/></p>
 <p>与公钥对应的是另一个文件，私钥。与公钥相比，私钥才是一把真正需要保护的“钥匙”，它同时可以用来签名（加密）和解密信息。</p>
@@ -290,12 +291,12 @@
 <p><img alt="" loading="lazy" src="images/18_0.webp"/></p>
 <p><del>公钥可以随意散播。你可以把它给任何人 - 如果你不怕公钥包含自己的邮箱地址，你可以把它放在个人博客上，你甚至可以把它放在社交媒体上...</del></p>
 <blockquote>
-<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> <em>noarch</em> 注2：根据各地区的法律法规不同，在散播之前请检查这样做的风险。以中国为例，因为公钥包含你的邮箱地址（你使用的邮箱可能是翻墙获取的，这是一个“我在翻墙”的信号），<em>noarch</em> 不建议将公钥放在密钥服务器上，或是在微博 / 微信朋友圈等地传播。请仅在必要时单独发给需要加密通讯的人，至少让你的加密通讯不那么显眼。</p>
+<p><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> noarch 注2：根据各地区的法律法规不同，在散播之前请检查这样做的风险。以中国为例，因为公钥包含你的邮箱地址（你使用的邮箱可能是翻墙获取的，这是一个“我在翻墙”的信号），noarch 不建议将公钥放在密钥服务器上，或是在微博 / 微信朋友圈等地传播。请仅在必要时单独发给需要加密通讯的人，至少让你的加密通讯不那么显眼。</p>
 <p>原文这么说是因为笔者假设你居住在美国，而美国及其各州法律目前允许端到端加密通讯。</p>
 </blockquote>
 <p>你需要安全地存储私钥。你只有一个私钥，所以绝对不要意外丢失它，或者随意复制；绝对不要分享它，或者以任何方式将其在互联网上传输，因为这样做会伤害这个密钥对的安全性。</p>
 <blockquote>
-<p><em>noarch</em> 注3：原文“你只有一个私钥”意为一个密钥对中只能有一个私钥。你可以拥有不同的身份，而这些不同的，隔离的身份之间需要有不同的密钥对，这样敌人无法将这些身份简单地连接起来。</p>
+<p>noarch 注3：原文“你只有一个私钥”意为一个密钥对中只能有一个私钥。你可以拥有不同的身份，而这些不同的，隔离的身份之间需要有不同的密钥对，这样敌人无法将这些身份简单地连接起来。</p>
 </blockquote>
 <h2 id="pgp-如何工作"><a class="header" href="#pgp-如何工作">PGP 如何工作</a></h2>
 <p>说了这么多，我们来以 PGP 为例子，具体看看公钥加密如何工作。我们假设你要给张三发一个加密消息：</p>
@@ -319,7 +320,7 @@
 <p>比如，如果你和你所在地区已知的异议分子交谈，光是与它们通讯，即使信息未被解密，就可能将你置于危险之中。在某些国家和地区，光是拒绝解密消息这点你就可能被判处监禁。</p>
 <p>实际上，保持匿名（“谁与谁通讯”）比保持隐私（“内容是什么”）要难得多。在 PGP 的例子里，一个保持匿名的方法就是让双方都使用 Tor, 并搭配一个匿名注册的邮箱。这种情况下，在 Tor 的匿名保护之上，PGP 依然能保持信息的隐秘性和真实性。</p>
 <blockquote>
-<p><em>noarch</em> 注4：如果你在中国，你无法直接使用 Tor. <code>privacy.noarch</code> 讲解了绕过审查访问 Tor 的方法。</p>
+<p>noarch 注4：如果你在中国，你无法直接使用 Tor. <code>privacy.noarch</code> 讲解了绕过审查访问 Tor 的方法。</p>
 </blockquote>
 <p>现在你熟悉了公钥加密的基础，你可以试试一些公钥加密工具了！</p>
 <p>试试 <a href="">[Android/iOS] Signal</a>, 

